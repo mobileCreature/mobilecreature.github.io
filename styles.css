@@ -1,16 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Exo+2:400,900italic,900,800italic,800,700italic,700,600italic,600,500,400italic,500italic,100,100italic,200,200italic,300);
-@import url(https://fonts.googleapis.com/css?family=Oswald:700,400,300);
-h1 {
-  font-family: 'Exo 2', sans-serif;
-  font-weight: 900 ;
-  color: darkgrey;
-  text-shadow: 4px 4px #000;
-}
-h3 {
-  font-family: 'Exo 2', sans-serif;
-  font-weight: 400 ;
-  color: dimgrey;
-}
 .btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger {
     -webkit-box-shadow: 2px 5px 0px rgba(4, 4, 4, 0.3);
     -moz-box-shadow:    2px 5px 0px rgba(4, 4, 4, 0.3);
@@ -21,14 +8,19 @@ h3 {
 	
 }
 .btn {
-	background: rgba(255, 255, 255, 0.75);
+	opacity: 0.85;  /* Opacity for Modern Browsers */
+    filter: alpha(opacity=85);  /* Opacity for IE8 and lower */
+    zoom: 1;  /* Fix for IE7 */
 	margin-bottom: 5px;
 	border-color: black !important;
 	border-left-width: 2px !important;
 	border-top-width: 2px !important;
 }
 .btn:hover {
-	background: rgba(0, 0, 0, 0.75);
+	opacity: 0.85;  /* Opacity for Modern Browsers */
+	background-color: black !important;
+    filter: alpha(opacity=85);  /* Opacity for IE8 and lower */
+    zoom: 1;  /* Fix for IE7 */
 	transform: scale(1.040);
 	transition: all .5s ease-in-out;
 
@@ -41,7 +33,7 @@ h3 {
 	-moz-animation-duration: .5s !important;
 	-webkit-animation-duration: .5s !important;
 }
-	@keyframes shake {
+@keyframes shake {
     0%, 100% {transform: translateX(0);}
     10%, 30%, 50%, 70%, 90% {transform: translateX(-1px);}
     20%, 40%, 60%, 80% {transform: translateX(1px);}
