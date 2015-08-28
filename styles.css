@@ -6,13 +6,13 @@
 .btn-default:active,.btn-primary:active,.btn-success:active,.btn-info:active,.btn-warning:active,.btn-danger:active {
     margin: 3px;
 }
-button {
+.btn {
 	margin-bottom: 5px;
 	border-color: black !important;
 	border-left-width: 2px !important;
 	border-top-width: 2px !important;
 }
-button:hover {
+.btn:hover {
 	transform: scale(1.040);
 	transition: all .5s ease-in-out;
 	background-color: #000 !important;
