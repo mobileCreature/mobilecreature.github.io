@@ -1,6 +1,3 @@
-.container-fluid {
-	margin-top: 55px;
-	}
 .home {
 	display: table;
 	background: url(http://i.imgur.com/a41JvUb.jpg) no-repeat center center fixed;
@@ -8,6 +5,7 @@
 	position: relative;
 	width: 100%;
 	background-size: cover;
+	margin-top: 55px;
 }
 hr { 
 	width:90%; 
