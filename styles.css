@@ -5,6 +5,7 @@
 }
 .btn-default:active,.btn-primary:active,.btn-success:active,.btn-info:active,.btn-warning:active,.btn-danger:active {
     margin: 3px;
+	
 }
 .btn {
 	margin-bottom: 5px;
@@ -13,9 +14,10 @@
 	border-top-width: 2px !important;
 }
 .btn:hover {
+	background: rgba(0, 0, 0, 0.75);
 	transform: scale(1.040);
 	transition: all .5s ease-in-out;
-	background-color: #000 !important;
+
 	color: #fff !important;
 	box-shadow: shake !important;
 	-moz-box-shadow: shake !important;
@@ -39,16 +41,23 @@
     10%, 30%, 50%, 70%, 90% {-webkit-transform: translateX(-1px);}
     20%, 40%, 60%, 80% {-webkit-transform: translateX(1px);}
 }
+#navbar {
+	background-color: #E7E7E7;
+}
 .navbar-header {
 	padding-left: 15px;
+	background-color: #E7E7E7;
 }
-.navbar-header:hover {
-	background-color: lightgrey;
-	padding-left: 15px;
+ul.nav b:hover {
+	color: white;
 }
-.active:hover {
-	background-color: white !important;
+ul.nav li a:hover { 
+	color: white; 
+	}
+.navbar-brand {
+	color: black !important;
 }
+
 .home {
 	display: table;
 	background: url(http://i.imgur.com/a41JvUb.jpg) no-repeat center center fixed;
