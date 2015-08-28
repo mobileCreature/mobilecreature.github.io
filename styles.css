@@ -4,7 +4,7 @@
 .home {
 	display: table;
 	background: url(http://i.imgur.com/a41JvUb.jpg) no-repeat center center fixed;
-	height:1000px;
+	height:800px;
 	position: relative;
 	width: 100%;
 	background-size: cover;
@@ -17,7 +17,7 @@ hr {
 .about {
 	display: table;
 	background: url(http://i.imgur.com/qiUHuoL.jpg) no-repeat center center fixed;
-	height: 1000px;
+	height: 800px;
 	position: relative;
 	width: 100%;
 	background-size: cover;
@@ -26,7 +26,7 @@ hr {
 .portfolio {
 	display: table;
 	background: url(http://i.imgur.com/a41JvUb.jpg) no-repeat center center fixed;
-	height: 1000px;
+	height: 800px;
 	position: relative;
 	width: 100%;
 	background-size: cover;
@@ -35,7 +35,7 @@ hr {
 .contact {
 	display: table;
 	background: url(http://i.imgur.com/qiUHuoL.jpg) no-repeat center center fixed;
-	height: 1000px;
+	height: 800px;
 	position: relative;
 	width: 100%;
 	background-size: cover;
