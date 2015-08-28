@@ -39,7 +39,16 @@
     10%, 30%, 50%, 70%, 90% {-webkit-transform: translateX(-1px);}
     20%, 40%, 60%, 80% {-webkit-transform: translateX(1px);}
 }
-
+.navbar-header {
+	padding-left: 15px;
+}
+.navbar-header:hover {
+	background-color: lightgrey;
+	padding-left: 15px;
+}
+.active:hover {
+	background-color: white !important;
+}
 .home {
 	display: table;
 	background: url(http://i.imgur.com/a41JvUb.jpg) no-repeat center center fixed;
