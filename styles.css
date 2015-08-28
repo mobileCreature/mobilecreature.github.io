@@ -1,0 +1,43 @@
+.container-fluid {
+	margin-top: 55px;
+	}
+.home {
+	display: table;
+	background: url(http://i.imgur.com/a41JvUb.jpg) no-repeat center center fixed;
+	height:1000px;
+	position: relative;
+	width: 100%;
+	background-size: cover;
+}
+hr { 
+	width:90%; 
+	height:2px; 
+	background: #000 }
+	
+.about {
+	display: table;
+	background: url(http://i.imgur.com/qiUHuoL.jpg) no-repeat center center fixed;
+	height: 1000px;
+	position: relative;
+	width: 100%;
+	background-size: cover;
+
+}
+.portfolio {
+	display: table;
+	background: url(http://i.imgur.com/a41JvUb.jpg) no-repeat center center fixed;
+	height: 1000px;
+	position: relative;
+	width: 100%;
+	background-size: cover;
+
+}
+.contact {
+	display: table;
+	background: url(http://i.imgur.com/qiUHuoL.jpg) no-repeat center center fixed;
+	height: 1000px;
+	position: relative;
+	width: 100%;
+	background-size: cover;
+
+}
