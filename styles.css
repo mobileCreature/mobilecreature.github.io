@@ -5,7 +5,8 @@
 	position: relative;
 	width: 100%;
 	background-size: cover;
-	margin-top: 55px;
+	margin-top: 50px;
+	padding-top: 100px;
 }
 hr { 
 	width:90%; 
