@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Exo+2:400,900italic,900,800italic,800,700italic,700,600italic,600,500,400italic,500italic,100,100italic,200,200italic,300);
 @import url(https://fonts.googleapis.com/css?family=Oswald:700,400,300);
-font {
+h1 {
   font-family: 'Exo 2', sans-serif;
   font-weight: 900 ;
   color: darkgrey;
@@ -21,6 +21,7 @@ h3 {
 	
 }
 .btn {
+	background: rgba(255, 255, 255, 0.75);
 	margin-bottom: 5px;
 	border-color: black !important;
 	border-left-width: 2px !important;
