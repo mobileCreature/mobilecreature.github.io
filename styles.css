@@ -1,3 +1,42 @@
+@import url(https://fonts.googleapis.com/css?family=Montez|Expletus+Sans:400,400italic,500,500italic,600,600italic,700,700italic);
+.shadow {
+	text-shadow: 2px 1px 2px darkblue;
+	color: rgba(255, 255, 255, 0.7);
+}
+h1 {
+    	font-family: 'Expletus+Sans', cursive important ;
+		font-weight: 700 important;
+		font-size: 48px important;
+		
+}
+h2 {
+    	font-family: 'Montez', cursive !important;
+		color: red important;
+}
+h3 {
+    	font-family: 'Expletus+Sans', cursive important ;
+		font-weight: 700italic important;
+		font-size: 24px important;
+}
+p, light{
+    	font-family: 'Expletus+Sans', cursive;
+		font-weight: 400;
+		font-size: 20px;
+		color: black;
+		
+}
+p, dark{
+    	font-family: 'Expletus+Sans', cursive;
+		font-weight: 400;
+		font-size: 20px;
+		color: white;
+}
+.montez, nav {
+    	font-family: 'Montez', cursive;
+		font-weight: 400;
+		font-size: 20px;
+		color: darkred !important;
+}
 .btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger {
     -webkit-box-shadow: 2px 5px 0px rgba(4, 4, 4, 0.3);
     -moz-box-shadow:    2px 5px 0px rgba(4, 4, 4, 0.3);
@@ -5,7 +44,6 @@
 }
 .btn-default:active,.btn-primary:active,.btn-success:active,.btn-info:active,.btn-warning:active,.btn-danger:active {
     margin: 3px;
-	
 }
 .btn {
 	opacity: 0.85;  /* Opacity for Modern Browsers */
@@ -64,25 +102,29 @@ ul.nav li a:hover {
 	color: black !important;
 }
 
+
+hr { 
+	width:90%; 
+	height:4px; 
+	opacity: 0.65;  /* Opacity for Modern Browsers */
+    filter: alpha(opacity=65);  /* Opacity for IE8 and lower */
+    zoom: 1;  /* Fix for IE7 */
+	background: darkred;
+}
 .home {
 	display: table;
-	background: url(http://i.imgur.com/a41JvUb.jpg) no-repeat center center fixed;
-	height:800px;
+	background: url(http://i.imgur.com/AIucynO.jpg) no-repeat center center fixed;
+	height:1000px;
 	position: relative;
 	width: 100%;
 	background-size: cover;
 	margin-top: 50px;
 	padding-top: 150px;
 }
-hr { 
-	width:90%; 
-	height:2px; 
-	background: #000 }
-	
 .about {
 	display: table;
-	background: url(http://i.imgur.com/qiUHuoL.jpg) no-repeat center center fixed;
-	height: 800px;
+	background: url(http://i.imgur.com/J4jDj3Q.jpg) no-repeat center center fixed;
+	height: 1000px;
 	position: relative;
 	width: 100%;
 	background-size: cover;
@@ -90,8 +132,8 @@ hr {
 }
 .portfolio {
 	display: table;
-	background: url(http://i.imgur.com/a41JvUb.jpg) no-repeat center center fixed;
-	height: 800px;
+	background: url(http://i.imgur.com/tSK969P.jpg) no-repeat center center fixed;
+	height: 1000px;
 	position: relative;
 	width: 100%;
 	background-size: cover;
@@ -99,8 +141,8 @@ hr {
 }
 .contact {
 	display: table;
-	background: url(http://i.imgur.com/qiUHuoL.jpg) no-repeat center center fixed;
-	height: 800px;
+	background: url(http://i.imgur.com/3B2hNnW.jpg) no-repeat center center fixed;
+	height: 1000px;
 	position: relative;
 	width: 100%;
 	background-size: cover;
