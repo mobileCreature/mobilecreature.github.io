@@ -1,0 +1,22 @@
+{
+  "name": "personal-portfolio-webpage",
+  "version": "1.0.0",
+  "description": "FFC Zipline 1",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GJSmith3rd/FCC-Zipline-Personal-Portfolio-Webpage.git"
+  },
+  "author": "Gilbert Smith",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GJSmith3rd/FCC-Zipline-Personal-Portfolio-Webpage/issues"
+  },
+  "homepage": "https://github.com/GJSmith3rd/FCC-Zipline-Personal-Portfolio-Webpage#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
+}
