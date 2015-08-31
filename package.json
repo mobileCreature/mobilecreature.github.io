@@ -1,21 +1,20 @@
 {
-  "name": "personal-portfolio-webpage",
-  "version": "1.0.0",
-  "description": "FFC Zipline 1",
+  "name": "Personal-Portfolio-Webpage",
+  "version": "0.1.0",
+  "description": "FreeCodeCamp Zipline 1",
   "main": "app.js",
   "scripts": {
-    "test": "test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GJSmith3rd/FCC-Zipline-Personal-Portfolio-Webpage.git"
+    "url": "git+https://github.com/GJSmith3rd/gjsmith3rd.github.io.git"
   },
   "author": "Gilbert Smith",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/GJSmith3rd/FCC-Zipline-Personal-Portfolio-Webpage/issues"
+    "url": "https://github.com/GJSmith3rd/gjsmith3rd.github.io/issues"
   },
-  "homepage": "https://github.com/GJSmith3rd/FCC-Zipline-Personal-Portfolio-Webpage#readme",
+  "homepage": "https://github.com/GJSmith3rd/gjsmith3rd.github.io#readme",
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-if": "^1.2.5",

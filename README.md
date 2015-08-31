@@ -1,4 +1,4 @@
-# FCC-Zipline-Personal-Portfolio-Webpage
+# GJSmith3rd/gjsmith3rd.github.io
 mobileCreature Web Design Studio
 --------------------------------
 
