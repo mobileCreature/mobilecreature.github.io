@@ -1,6 +1,5 @@
-// #!/bin/env node  <!-- Commented out env search of $PATH for node
-
-//  OpenShift sample Node application
+//jshint -W106
+// OpenShift sample Node application
 var express = require('express');
 var fs = require('fs');
 // var bootstrap = require("bootstrap");
@@ -23,7 +22,7 @@ var ServerApp = function () {
      */
     self.setupVariables = function () {
         //  Set the environment variables we need.for OpenShift or Cloud9 or localhost
-        self.ipaddress = process.env.OPENSHIFT_NODEJS_IP || process.env.IP || "10.0.0.57";
+        self.ipaddress = process.env.OPENSHIFT_NODEJS_IP || process.env.IP || '10.0.0.57';
         self.port = process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 8080;
     };
 
@@ -32,7 +31,7 @@ var ServerApp = function () {
      *  Populate the cache.
      */
     self.populateCache = function () {
-        if (typeof self.zcache === "undefined") {
+        if (typeof self.zcache === 'undefined') {
             self.zcache = {
                 'index.html': '',
 
@@ -49,6 +48,7 @@ var ServerApp = function () {
      *  Retrieve entry (content) from cache.
      *  @param {string} key  Key identifying content to retrieve from cache.
      */
+    /* jshint -W106 */
     self.cache_get = function (key) {
         return self.zcache[key];
     };
@@ -60,7 +60,7 @@ var ServerApp = function () {
      *  @param {string} sig  Signal to terminate on.
      */
     self.terminator = function (sig) {
-        if (typeof sig === "string") {
+        if (typeof sig === 'string') {
             console.log('%s: Received %s - terminating sample app ...',
                 Date(Date.now()), sig);
             process.exit(1);
@@ -100,9 +100,9 @@ var ServerApp = function () {
         self.routes = {};
 
         self.routes['/asciimo'] = function (req, res) {
-            var link = "http://i.imgur.com/kmbjB.png";
+            var link = 'http://i.imgur.com/kmbjB.png';
             // var link2 = "http://i.imgur.com/008zXH1.jpg";
-            res.send("<html><body><img src='" + link + "'></body></html>");
+            res.send('<html><body><img src="' + link + '"></body></html>');
         };
 
         self.routes['/'] = function (req, res) {
@@ -152,6 +152,7 @@ var ServerApp = function () {
     self.serveFiles = function () {
 
         self.app.use("/public", express.static(__dirname + '/public'));
+        self.app.use("/", express.static(__dirname + '/'));
 
     };
 
