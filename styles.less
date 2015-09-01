@@ -1,6 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Montez|Expletus+Sans:400,400italic,500,500italic,600,600italic,700,700italic);
+@headingColor: blue;
+@accentColor: darkred;
+
+@textColor: black;
+@textColorLight: white;
+
+@shadowColor: darkgrey;
+@darkShadowColor: orange;
+
 .shadow {
-	text-shadow: 2px 1px 2px orange;
+	text-shadow: 2px 1px 2px @headingColor;
 	color: rgba(255, 255, 255, 0.7);
 }
 h1 {
@@ -11,7 +20,7 @@ h1 {
 }
 h2 {
     	font-family: 'Montez', cursive !important;
-		color: red important;
+		color: @accentColor important;
 
 }
 h3 {

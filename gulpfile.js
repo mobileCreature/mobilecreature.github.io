@@ -9,7 +9,7 @@ gulp.task('serve-dev', ['less-watcher'], function () {
     log('***Starting web server...');
 
     return $.nodemon(config.nodemon)
-        .on('start', function () {
+        .on('start', ['vet'], function () {
             log('***Nodemon started succesfully');
         })
         .on('restart', ['vet'], function (ev) {
@@ -22,17 +22,11 @@ gulp.task('serve-dev', ['less-watcher'], function () {
         .on('exit', function () {
             log('***Nodemon exited cleanly');
         });
-
 });
 
 //task less-watcher run tasks styles if there are changes
 gulp.task('less-watcher', function () {
-    log('***Watching LESS files...');
-    // gulp.watch([config.less], ['styles']);
-    var watcher = gulp.watch([config.less], ['styles']);
-    watcher.on('change', function (event) {
-        console.log('*** LESS ' + event.path + ' was ' + event.type + ', running STYLES task...');
-    });
+    gulp.watch([config.less], ['styles']);
 });
 
 gulp.task('styles', ['clean'], function () {
@@ -41,6 +35,7 @@ gulp.task('styles', ['clean'], function () {
     return gulp
         .src(config.less)
         .pipe($.less())
+        .on('error', function (err) { log(err.message); })
         .pipe($.autoprefixer({ browsers: ['last 2 versions', '> 5%'] }))
         .pipe(gulp.dest(config.temp));
 });
