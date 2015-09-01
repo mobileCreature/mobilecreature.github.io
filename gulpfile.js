@@ -1,15 +1,14 @@
-var $ = require('gulp-load-plugins')({ lazy: true });
-var args = require('yargs').argv;
-var del = require('del');
-var gulp = require('gulp');
-
-var config = require('./gulp.config')();
+var $ = require('gulp-load-plugins')({ lazy: true }),
+    args = require('yargs').argv,
+    config = require('./gulp.config')(),
+    del = require('del'),
+    gulp = require('gulp');
 
 gulp.task('serve-dev', ['less-watcher'], function () {
     log('***Starting web server...');
 
     return $.nodemon(config.nodemon)
-        .on('start', ['vet'], function () {
+        .on('start', function () {
             log('***Nodemon started succesfully');
         })
         .on('restart', ['vet'], function (ev) {
@@ -25,22 +24,21 @@ gulp.task('serve-dev', ['less-watcher'], function () {
 });
 
 //task less-watcher run tasks styles if there are changes
-gulp.task('less-watcher', function () {
+gulp.task('less-watcher', ['styles'], function () {
+    log('***Watching LESS files...');
     gulp.watch([config.less], ['styles']);
 });
-
+//
 gulp.task('styles', ['clean'], function () {
     log('***Compiling less to css...');
-
     return gulp
         .src(config.less)
+        .pipe($.plumber())
         .pipe($.less())
-        .on('error', function (err) { log(err.message); })
-        .pipe($.autoprefixer({ browsers: ['last 2 versions', '> 5%'] }))
         .pipe(gulp.dest(config.temp));
 });
 
-gulp.task('clean', ['vet'], function () {
+gulp.task('clean', function () {
     log('***Cleaning files...');
     del(config.clean);
 });

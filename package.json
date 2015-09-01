@@ -15,6 +15,7 @@
   },
   "homepage": "https://github.com/GJSmith3rd/gjsmith3rd.github.io#readme",
   "devDependencies": {
+    "beepbeep": "^1.2.0",
     "del": "^2.0.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
