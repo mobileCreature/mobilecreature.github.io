@@ -31,7 +31,7 @@ gulp.task('less-watcher', function () {
     // gulp.watch([config.less], ['styles']);
     var watcher = gulp.watch([config.less], ['styles']);
     watcher.on('change', function (event) {
-        console.log('File ' + event.path + ' was ' + event.type + ', running STYLES task...');
+        console.log('*** LESS ' + event.path + ' was ' + event.type + ', running STYLES task...');
     });
 });
 
