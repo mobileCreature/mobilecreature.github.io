@@ -1,5 +1,6 @@
 var $ = require('gulp-load-plugins')({ lazy: true }),
     args = require('yargs').argv,
+    browserSync = ('browser-sync'),
     config = require('./gulp.config')(),
     del = require('del'),
     gulp = require('gulp');
