@@ -1,11 +1,23 @@
 module.exports = function () {
         var config = {
 		
+                /**
+                * File paths
+                */
                 //all js to vet
                 alljs: [
                         './script.js',
                         './gulpfile.js'
                 ],
+                
+                //temp folder
+                temp: './',
+                
+                //clean folder
+                clean: './*.css',
+                
+                //less
+                less: 'styles.less',
 		
                 //nodemon config
                 nodemon: {
@@ -15,20 +27,15 @@ module.exports = function () {
                                 'script.js',
                                 'gulpfile.js',
                                 'gulp.config.js',
-                                'app.js',
-                                'styles.css'
+                                'app.js'
                         ],
-                        delay: 10,
+                        delay: 15,
                         verbose: false,
-                        ext: 'html js css',
+                        ext: 'html js html',
                         ignore: ['ignored.js,/.git/*.*'],
                         tasks: ['vet']
                 },
-		
-                /**
-                * browser sync
-                */
-                browserReloadDelay: 5000
+
         };
 
         return config;
