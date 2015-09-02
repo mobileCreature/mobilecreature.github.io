@@ -1,42 +1,36 @@
 module.exports = function () {
         var config = {
 		
-                /**
-                * File paths
-                */
-                //all js to vet
+                
+                //clean folder
+                clean: './*.css',
+                
+                //browserSync
+                browserSyncFiles: [
+                        'styles.css',
+                        'index.html',
+                        'script.js',
+                        'gulp.js',
+                        'gulp.config.js'
+                ],
+                browserReloadDelay: 3000,
+                
+                //JavaScript - all js to vet
                 alljs: [
                         './script.js',
                         './gulpfile.js'
                 ],
                 
-                //temp folder
-                temp: './',
-                
-                //clean folder
-                clean: './*.css',
-                
                 //less
                 less: 'styles.less',
+
+                //node settings
+                defaultPort: 7203,
+                nodeServer: './app.js',
 		
-                //nodemon config
-                nodemon: {
-                        script: 'app.js',
-                        watch: [
-                                'index.html',
-                                'script.js',
-                                'gulpfile.js',
-                                'gulp.config.js',
-                                'app.js'
-                        ],
-                        delay: 15,
-                        verbose: false,
-                        ext: 'html js html',
-                        ignore: ['ignored.js,/.git/*.*'],
-                        tasks: ['vet']
-                },
+                //temp folder
+                temp: './',
 
         };
-
         return config;
 };
