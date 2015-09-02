@@ -1,20 +1,52 @@
 @import url(https://fonts.googleapis.com/css?family=Montez|Expletus+Sans:400,400italic,500,500italic,600,600italic,700,700italic);
-.shadow {
-  text-shadow: 2px 1px 2px darkred;
+#navbar {
+  background-color: #E7E7E7;
+}
+.navbar-header {
+  padding-left: 15px;
+  background-color: #E7E7E7;
+}
+ul.nav b:hover {
+  color: red;
+}
+ul.nav li a:hover {
+  color: white !important;
+}
+.navbar-brand {
+  color: black !important;
+}
+.shadowLight {
+  text-shadow: 2px 1px 2px white;
+  color: rgba(255, 255, 255, 0.7);
+}
+.shadowDark {
+  text-shadow: 2px 1px 2px black;
+  color: rgba(0, 0, 0, 0.7);
+}
+.shadowHeading {
+  text-shadow: 2px 1px 2px darkblue;
   color: rgba(255, 255, 255, 0.7);
 }
 h1 {
   font-family: 'Expletus+Sans', cursive important;
   font-weight: 700 important;
   font-size: 72px important;
+  font-family: 'Expletus+Sans', cursive !important;
+  font-weight: 700 !important;
+  font-size: 48px !important;
+  color: white !important;
+  text-shadow: 2px 1px 2px darkblue;
+  color: rgba(255, 255, 255, 0.7);
 }
 h2 {
   font-family: 'Montez', cursive !important;
-  color: darkred important;
+  color: red !important;
+  text-shadow: 2px 1px 2px black;
+  color: rgba(0, 0, 0, 0.7);
 }
 h3 {
   font-family: 'Expletus+Sans', cursive important;
-  font-weight: 700italic important;
+  font-weight: 700italic !important;
   font-size: 24px important;
 }
 p,
@@ -32,7 +64,7 @@ dark {
   color: white;
 }
 .expletus {
-  font-family: 'Expletus+Sans', cursive important;
+  font-family: 'Expletus+Sans', cursive !important;
   font-weight: 400 important;
   font-size: 20px important;
   color: darkred !important;
@@ -148,22 +180,6 @@ dark {
   80% {
     -webkit-transform: translateX(1px);
   }
-}
-#navbar {
-  background-color: #E7E7E7;
-}
-.navbar-header {
-  padding-left: 15px;
-  background-color: #E7E7E7;
-}
-ul.nav b:hover {
-  color: white;
-}
-ul.nav li a:hover {
-  color: white;
-}
-.navbar-brand {
-  color: black !important;
 }
 hr {
   width: 90%;
