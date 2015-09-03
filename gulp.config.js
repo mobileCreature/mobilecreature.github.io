@@ -5,13 +5,15 @@ module.exports = function () {
                 //clean folder
                 clean: './*.css',
                 
+                //backup file location
+                backup: './bak/',
+                
                 //browserSync
                 browserSyncFiles: [
                         'styles.css',
                         'index.html',
-                        'script.js',
-                        'gulp.js',
-                        'gulp.config.js'
+                        'script.js'
+
                 ],
                 browserReloadDelay: 3000,
                 

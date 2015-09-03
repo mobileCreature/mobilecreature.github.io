@@ -1,84 +1,70 @@
 @import url(https://fonts.googleapis.com/css?family=Montez|Expletus+Sans:400,400italic,500,500italic,600,600italic,700,700italic);
-@headingColor: darkred;
-@accentColor: darkred;
 
-@headingColor: white;
-@headingColorShadow: darkblue;
+@heading1Color: white;
+@heading1ColorShadow: darkblue;
 
-@mainColor: black;
-@accentColor: red;
+@heading2Color: red;
+@heading2ColorShadow: black;
 
-@textColor: black;
+@navColor: darkred;
+
 @textColorLight: white;
 
 @shadowColor: darkgrey;
 @accentShadowColor: darkred;
 
-@greyShadow: rgba(4, 4, 4, 0.3);
-@blackShadow: rgba(0, 0, 0, 0.3);
+@greyShadow: rgba(0, 0, 0, 0.3);
+@blackShadow: rgba(0, 0, 0, 0.7);
 
 #navbar {
 	background-color: #E7E7E7;
+	filter:none;
 }
-.navbar-header {
-	padding-left: 15px;
-	background-color: #E7E7E7;
-}
-ul.nav b:hover {
-	color: @accentColor;
-}
-ul.nav li a:hover { 
-	color: @textColorLight !important; 
-	}
-.navbar-brand {
-	color: black !important;
-}
-.shadowLight {
-	text-shadow: 2px 1px 2px @headingColor;
-	color: rgba(255, 255, 255, 0.7);
-}
-.shadowDark {
-	text-shadow: 2px 1px 2px @textColor;
-	color: rgba(0, 0, 0, 0.7);
-}
+// .navbar-header {
+// 	padding-left: 15px;
+// 	background-color: #E7E7E7;
+// }
+// ul.nav b:hover {
+// 	color: @accentColor;
+// }
+// ul.nav li a:hover { 
+// 	color: @textColorLight !important; 
+// }
+// .navbar-brand {
+// 	color: black !important;
+// }
+// .shadowLight {
+// 	text-shadow: 2px 1px 2px @heading;
+// 	color: rgba(255, 255, 255, 0.7);
+// }
+// // .shadowDark {
+// 	text-shadow: 2px 1px 2px @textColor;
+// 	color: rgba(0, 0, 0, 0.7);
+// }
 .shadowHeading {
-	text-shadow: 2px 1px 2px @headingColorShadow;
-	color: rgba(255, 255, 255, 0.7);
+	text-shadow: 2px 1px 2px @heading1ColorShadow;
 }
 h1 {
-    	font-family: 'Expletus+Sans', cursive important ;
-		font-weight: 700 important;
-		font-size: 72px important;
-		
     	font-family: 'Expletus+Sans', cursive !important ;
 		font-weight: 700 !important;
-		font-size: 48px !important;
-		color: @headingColor !important;
-		.shadowHeading
+		font-size: 36px !important;
+		color: @heading1Color !important;
+		text-shadow: 2px 1px 2px @heading1ColorShadow;
 }
 h2 {
-    	font-family: 'Montez', cursive !important;
-		color: @accentColor !important;
-		.shadowDark
-
+		font-family: 'Montez', cursive !important;
+		color: @heading2Color !important;
+		text-shadow: 2px 1px 2px @heading2ColorShadow;
 }
-h3 {
-    	font-family: 'Expletus+Sans', cursive important ;
-		font-weight: 700italic !important;
-		font-size: 24px important;
-}
-p, light{
+p, .lightBackground{
     	font-family: 'Expletus+Sans', cursive;
 		font-weight: 400;
-		font-size: 20px;
 		color: black;
-		
 }
-p, dark{
+p, .darkBackground{
     	font-family: 'Expletus+Sans', cursive;
 		font-weight: 400;
-		font-size: 20px;
-		color: white;;
+		color:white;
 }
 .expletus {
     	font-family: 'Expletus+Sans', cursive !important ;

@@ -1,5 +1,5 @@
 # GJSmith3rd/gjsmith3rd.github.io
-mobileCreature Web Design Studio
+[mobileCreature Web Design Studio](http://codepen.io/GJSmith3rd/pen/epOZZM) 
 --------------------------------
 
 

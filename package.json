@@ -20,6 +20,7 @@
     "del": "^2.0.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
+    "gulp-csso": "^1.0.0",
     "gulp-if": "^1.2.5",
     "gulp-jscs": "^2.0.0",
     "gulp-jshint": "^1.11.2",
@@ -28,6 +29,7 @@
     "gulp-nodemon": "^2.0.4",
     "gulp-plumber": "^1.0.1",
     "gulp-print": "^1.1.0",
+    "gulp-task-listing": "^1.0.1",
     "gulp-util": "^3.0.6",
     "jshint-stylish": "^2.0.1",
     "yargs": "^3.22.2"

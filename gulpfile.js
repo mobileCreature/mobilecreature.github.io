@@ -6,6 +6,10 @@ var $ = require('gulp-load-plugins')({ lazy: true }),
     gulp = require('gulp'),
     port = process.env.PORT || config.defaultPort;
 
+//create task listings and default task 'help'
+gulp.task('help', $.taskListing);
+gulp.task('default', ['serve-dev']);
+
 gulp.task('serve-dev', ['less-watcher'], function () {
 
     log('***Starting web server...');
@@ -63,6 +67,8 @@ gulp.task('styles', ['clean'], function () {
         .src(config.less)
         .pipe($.plumber())
         .pipe($.less())
+        .pipe(gulp.dest(config.backup))
+        .pipe($.csso())
         .pipe(gulp.dest(config.temp));
 });
 
@@ -121,6 +127,7 @@ function startBrowserSync() {
         });
 
     var options = {
+
         port: 3099,
         proxy: '10.0.0.57:' + port,
         files: config.browserSyncFiles,
@@ -133,10 +140,12 @@ function startBrowserSync() {
         injectChanges: true,
         logFileChanges: true,
         logLevel: 'debug',
-        logPrefix: '*** browserSync gulp-patterns',
+        logPrefix: '*** browserSync',
         notify: true,
         reloadDelay: 3000,
         open: false,
+        scrollRestoreTechnique: 'cookie',
+        scrollProportionally: 'true'
     };
 
     browserSync(options);
