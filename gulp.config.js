@@ -3,7 +3,10 @@ module.exports = function () {
 		
                 
                 //clean folder
-                clean: './*.css',
+                clean: [
+                        './*.css',
+                        './.bak/*.less'
+                ],
                 
                 //backup file location
                 backup: './bak/',
