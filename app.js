@@ -1,4 +1,6 @@
-//jshint -W106
+//jshint -W089
+//The body of a for in should be wrapped in an if statement to filter unwanted properties from the prototype.  (W089)
+
 // OpenShift sample Node application
 var express = require('express');
 var fs = require('fs');
@@ -12,7 +14,6 @@ var ServerApp = function () {
     //  Scope.
     var self = this;
 
-
     /*  ================================================================  */
     /*  Helper functions.                                                 */
     /*  ================================================================  */
@@ -25,7 +26,6 @@ var ServerApp = function () {
         self.ipaddress = process.env.OPENSHIFT_NODEJS_IP || process.env.IP || '10.0.0.57';
         self.port = process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 7203;
     };
-
 
     /**
      *  Populate the cache.
@@ -43,16 +43,14 @@ var ServerApp = function () {
 
     };
 
-
     /**
      *  Retrieve entry (content) from cache.
      *  @param {string} key  Key identifying content to retrieve from cache.
      */
     /* jshint -W106 */
-    self.cache_get = function (key) {
+    self.cacheGet = function (key) {
         return self.zcache[key];
     };
-
 
     /**
      *  terminator === the termination handler
@@ -67,7 +65,6 @@ var ServerApp = function () {
         }
         console.log('%s: Node server stopped.', Date(Date.now()));
     };
-
 
     /**
      *  Setup termination handlers (for exit and a list of signals).
@@ -88,7 +85,6 @@ var ServerApp = function () {
         });
     };
 
-
     /*  ================================================================  */
     /*  App server functions (main app logic here).                       */
     /*  ================================================================  */
@@ -107,16 +103,15 @@ var ServerApp = function () {
 
         self.routes['/'] = function (req, res) {
             res.setHeader('Content-Type', 'text/html');
-            res.send(self.cache_get('index.html'));
+            res.send(self.cacheGet('index.html'));
         };
 
         self.routes['/index.html'] = function (req, res) {
             res.setHeader('Content-Type', 'text/html');
-            res.send(self.cache_get('index.html'));
+            res.send(self.cacheGet('index.html'));
         };
 
     };
-
 
     /**
      *  Initialize the server (express) and create the routes and register
@@ -132,7 +127,6 @@ var ServerApp = function () {
             self.app.get(r, self.routes[r]);
         }
     };
-
 
     /**
      *  Initializes the sample application.
@@ -151,8 +145,8 @@ var ServerApp = function () {
      */
     self.serveFiles = function () {
 
-        self.app.use("/public", express.static(__dirname + '/public'));
-        self.app.use("/", express.static(__dirname + '/'));
+        self.app.use('/public', express.static(__dirname + '/public'));
+        self.app.use('/', express.static(__dirname + '/'));
 
     };
 
@@ -169,9 +163,7 @@ var ServerApp = function () {
 
 };
 
-
 /*  Web Server Application.  */
-
 
 /**
  *  main():  Main code.

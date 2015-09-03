@@ -1,40 +1,54 @@
 module.exports = function () {
         var config = {
-		
-                
+
                 //clean folder
                 clean: [
                         './*.css',
                         './.bak/*.less'
                 ],
-                
+
+                //css file location
+                css: './styles.css',
+
                 //backup file location
-                backup: './bak/',
-                
+                backup: './.bak/',
+
                 //browserSync
                 browserSyncFiles: [
-                        'styles.css',
-                        'index.html',
-                        'script.js'
+                        './styles.css',
+                        './index.html',
+                        './script.js',
+                        'app.js'
 
                 ],
                 browserReloadDelay: 3000,
-                
+
+                //html file location
+                html: './index.html',
+
                 //JavaScript - all js to vet
                 alljs: [
                         './script.js',
-                        './gulpfile.js'
+                        './gulpfile.js',
+                        './gulp.config.js',
+                        './app.js'
                 ],
-                
+
                 //less
-                less: 'styles.less',
+                less: './styles.less',
 
                 //node settings
                 defaultPort: 7203,
                 nodeServer: './app.js',
-		
+
                 //temp folder
-                temp: './',
+                temp: '.',
+
+                watch: [
+                        './index.html',
+                        './script.js',
+                        './app.js'
+                ]
 
         };
         return config;

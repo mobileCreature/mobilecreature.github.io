@@ -10,7 +10,7 @@ var $ = require('gulp-load-plugins')({ lazy: true }),
 gulp.task('help', $.taskListing);
 gulp.task('default', ['serve-dev']);
 
-gulp.task('serve-dev', ['less-watcher'], function () {
+gulp.task('serve-dev', ['inject'], function () {
 
     log('***Starting web server...');
 
@@ -18,19 +18,13 @@ gulp.task('serve-dev', ['less-watcher'], function () {
         env: {
             'port': port
         },
-        script: 'app.js',
-        watch: [
-            'index.html',
-            'script.js',
-            'gulpfile.js',
-            'gulp.config.js',
-            'app.js'
-        ],
+        script: './app.js',
+        watch: [config.watch],
         delay: 15,
         verbose: false,
-        ext: 'html js html',
+        ext: 'html js',
         ignore: ['ignored.js,/.git/*.*'],
-        tasks: ['vet']
+        tasks: ['inject']
     };
 
     return $.nodemon(nodeOptions)
@@ -38,7 +32,7 @@ gulp.task('serve-dev', ['less-watcher'], function () {
             log('***Nodemon started succesfully');
             startBrowserSync();
         })
-        .on('restart', ['vet'], function (ev) {
+        .on('restart', ['inject'], function (ev) {
             log('***files changes on restart:\n' + ev);
             log('***Nodemon restarted!');
 
@@ -55,8 +49,18 @@ gulp.task('serve-dev', ['less-watcher'], function () {
         });
 });
 
+//wiredep and inject to manage index.html scripts and dependencies
+gulp.task('inject', ['less-watcher'], function () {
+	log('***Inject the custom css into the app html and call wiredep');
+
+	return gulp
+		.src(config.html)
+		.pipe($.inject(gulp.src(config.css)))
+		.pipe(gulp.dest(config.temp));
+});
+
 //task less-watcher run tasks styles if there are changes
-gulp.task('less-watcher', ['styles'], function () {
+gulp.task('less-watcher',['styles'], function () {
     log('***Watching LESS files...');
     gulp.watch([config.less], ['styles']);
 });
@@ -72,7 +76,7 @@ gulp.task('styles', ['clean'], function () {
         .pipe(gulp.dest(config.temp));
 });
 
-gulp.task('clean', function () {
+gulp.task('clean', ['vet'], function () {
     log('***Cleaning files...');
     del(config.clean);
 });
@@ -80,10 +84,7 @@ gulp.task('clean', function () {
 gulp.task('vet', function () {
     log('***Analyzing js with jshint and jscs..');
     return gulp
-        .src([
-            './script.js',
-            './gulpfile.js'
-        ])
+        .src(config.alljs)
         .pipe($.if(args.verbose, $.print()))
         .pipe($.jscs())
         .pipe($.jshint())
@@ -121,7 +122,7 @@ function startBrowserSync() {
 
     log('***Starting browserSync on port ' + port);
 
-    gulp.watch([config.less], ['styles'])
+    gulp.watch([config.watch], ['inject', browserSync.reload])
         .on('change', function (event) {
             changeEvent(event);
         });
