@@ -8,7 +8,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var compress = require('compression');
 var cors = require('cors');
-var errorHandler = require('./routes/utils/errorHandler')();
+//var errorHandler = require('./routes/utils/errorHandler')();
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 
@@ -17,7 +17,7 @@ var routes;
 
 var environment = process.env.NODE_ENV;
 
-app.use(favicon(__dirname + '/favicon.ico'));
+//app.use(favicon(__dirname + '/favicon.ico'));
 app.use(bodyParser.urlencoded({
     extended: true
 }));
@@ -25,9 +25,9 @@ app.use(bodyParser.json());
 app.use(compress());
 app.use(logger('dev'));
 app.use(cors());
-app.use(errorHandler.init);
+//app.use(errorHandler.init);
 
-routes = require('./routes/index')(app);
+//routes = require('./routes/index')(app);
 
 console.log('About to crank up node');
 console.log('PORT=' + port);
@@ -41,15 +41,15 @@ app.get('/ping', function(req, res, next) {
 switch (environment) {
     case 'build':
         console.log('** BUILD **');
-        app.use(express.static('./build/'));
-        app.use('/*', express.static('./build/index.html'));
+        app.use(express.static('./project/build/'));
+        app.use('/*', express.static('./project/build/index.html'));
         break;
     default:
         console.log('** DEV **');
-        app.use(express.static('./src/client/'));
+        app.use(express.static('./project/src/client/'));
         app.use(express.static('./'));
         app.use(express.static('./tmp'));
-        app.use('/*', express.static('./src/client/index.html'));
+        app.use('/*', express.static('./project/src/client/index.html'));
         break;
 }
 

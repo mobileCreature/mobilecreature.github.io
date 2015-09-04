@@ -1,58 +1,54 @@
 module.exports = function () {
-
-        var server = './src/server/';
-
+        var client = './project/src/client/';
+        var clientApp = client + 'app/';
+        var server = './project/src/server/';
+        var temp = './.tmp/';
         var config = {
 
                 //clean folder
                 clean: [
                         './*.css',
+                        client + 'styles/*.css',
                         './.bak/*.less'
                 ],
+                
+                client: client,
 
                 //css file location
-                css: './styles.css',
+                css: temp + 'styles.css',
 
                 //backup file location
                 backup: './.bak/',
 
-                //browserSync
-                browserSyncFiles: [
-                        './styles.css',
-                        './index.html',
-                        './script.js',
-                        'app.js'
-
-                ],
                 browserReloadDelay: 3000,
 
                 //html file location
-                html: './index.html',
+                html: clientApp + '**/*.*',
 
                 //JavaScript - all js to vet
                 alljs: [
-                        './script.js',
-                        './gulpfile.js',
-                        './gulp.config.js',
-                        './app.js'
+                        client + 'script.js',
+                        server + 'app.js'
                 ],
 
                 //less
-                less: './styles.less',
+                less: client + 'styles/styles.less',
 
                 //node settings
                 defaultPort: 7203,
                 nodeServer: server + 'app.js',
 
+                root: './',
+
                 server: server,
 
                 //temp folder
-                temp: '.',
+                temp: temp,
 
                 watch: [
-                        './index.html',
-                        './script.js',
-                        './app.js'
+                        client + 'index.html',
+                        client + 'script.js',
+                        server + 'app.js'
                 ]
 
         };
