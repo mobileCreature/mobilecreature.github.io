@@ -5,14 +5,14 @@
           filter: none;
 }
 .shadowHeading {
-  text-shadow: 2px 1px 2px green;
+  text-shadow: 2px 1px 2px darkblue;
 }
 h1 {
   font-family: 'Expletus+Sans', cursive !important;
   font-weight: 700 !important;
   font-size: 36px !important;
   color: white !important;
-  text-shadow: 2px 1px 2px green;
+  text-shadow: 2px 1px 2px darkblue;
 }
 h2 {
   font-family: 'Montez', cursive !important;
