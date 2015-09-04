@@ -41,8 +41,8 @@ app.get('/ping', function(req, res, next) {
 switch (environment) {
     case 'build':
         console.log('** BUILD **');
-        app.use(express.static('./project/src/build/'));
-        app.use('/*', express.static('./project/src/build/index.html'));
+        app.use(express.static('./project/build/'));
+        app.use('/*', express.static('./project/build/index.html'));
         break;
     default:
         console.log('** DEV **');

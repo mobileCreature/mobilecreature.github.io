@@ -11,7 +11,9 @@ module.exports = function () {
                         client + 'styles/*.css',
                         './.bak/*.less'
                 ],
-                
+
+                build: './project/build/',
+
                 client: client,
 
                 //css file location
@@ -24,6 +26,17 @@ module.exports = function () {
 
                 //html file location
                 html: clientApp + '**/*.*',
+
+                index: client + 'index.html',
+
+                js: [
+                        //include angular modules
+                        clientApp + '**/*.module.js',
+                        //include other js files
+                        clientApp + '**/*.js',
+                        //exclude special test js files
+                        '!' + clientApp + '**/*.spec.js'
+                ],
 
                 //JavaScript - all js to vet
                 alljs: [
@@ -44,13 +57,27 @@ module.exports = function () {
 
                 //temp folder
                 temp: temp,
-
-                watch: [
-                        client + 'index.html',
-                        client + 'script.js',
-                        server + 'app.js'
-                ]
+                
+                //set default bower file locations
+                bower: {
+                        json: require('./bower.json'),
+                        directory: './bower_components',
+                        ignorePath: '../../'
+                },
 
         };
+        
+        //provide bower locations to function
+        config.getWiredepDefaultOptions = function () {
+                var options = {
+                        bowerJson: config.bower.json,
+                        directory: config.bower.directory,
+                        ignorePath: config.bower.ignorePath
+                };
+                return options;
+
+        };
+
         return config;
 };
+

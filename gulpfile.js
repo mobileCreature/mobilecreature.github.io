@@ -34,6 +34,64 @@ gulp.task('inject', ['styles'], function () {
         .pipe(gulp.dest(config.client));
 });
 
+gulp.task('optimize', ['inject', 'wiredep'], function () {
+
+    log('***Optimizing the js, css, html');
+
+    var assets = $.useref.assets({ searchPath: './' });
+
+    var cssFilter = $.filter('**/*.css', { restore: true });
+
+    return gulp
+        .src(config.index)
+    //error handling
+        .pipe($.plumber())
+        
+    //combine all assets and concat into one reference
+        .pipe(assets)
+        
+    //filter down to css
+        .pipe(cssFilter)
+        
+    //csso filter to css
+        .pipe($.csso())
+        
+    //revised working filter to restore css
+        .pipe(cssFilter.restore)
+        
+    //output all files back from stream
+        .pipe(assets.restore())
+	
+    //output to build
+        .pipe(gulp.dest(config.build))
+        ;
+
+});
+
+gulp.task('inject', ['styles'], function () {
+    log('***Inject the custom css into the app html and call wiredep');
+
+    return gulp
+        .src(config.index)
+        .pipe($.inject(gulp.src(config.css)))
+        .pipe(gulp.dest(config.client));
+});
+
+//wiredep and inject to manage index.html scripts and dependencies
+gulp.task('wiredep', function () {
+	log('***Wire up the bower css js and our app js into the html');
+
+	var options = config.getWiredepDefaultOptions();
+	var wiredep = require('wiredep').stream;
+
+	return gulp
+		.src(config.index)
+		.pipe(wiredep(options))
+		.pipe($.inject(gulp.src(config.js)))
+		.pipe(gulp.dest(config.client));
+
+});
+
 //task less-watcher run tasks styles if there are changes
 gulp.task('less-watcher', ['styles'], function () {
     log('***Watching LESS files...');
@@ -149,6 +207,11 @@ function startBrowserSync(isDev) {
             .on('change', function (event) {
                 changeEvent(event);
             });
+    } else {
+
+        gulp.watch([config.less, config.html, config.js], ['optimize', browserSync.reload])
+            .on('change', function (event) { changeEvent(event); });
+
     }
 
     var options = {
