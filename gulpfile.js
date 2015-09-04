@@ -10,6 +10,20 @@ var $ = require('gulp-load-plugins')({ lazy: true }),
 gulp.task('help', $.taskListing);
 gulp.task('default', ['serve-dev']);
 
+//automate dev node server start and restart on changes
+gulp.task('serve-dev', ['inject'], function () {
+
+	serve(true /* is Dev */);
+
+});
+
+//automate build node server start and restart on changes
+gulp.task('serve-build', ['optimize'], function () {
+
+	serve(false /* is Dev */);
+
+});
+
 gulp.task('serve-dev', ['inject'], function () {
 
     log('***Starting web server...');
@@ -18,7 +32,7 @@ gulp.task('serve-dev', ['inject'], function () {
         env: {
             'port': port
         },
-        script: './app.js',
+        script: './src/server/app.js',
         watch: [config.watch],
         delay: 15,
         verbose: false,
@@ -93,6 +107,51 @@ gulp.task('vet', function () {
 });
 
 ////////////////////////////////////
+function serve(isDev) {
+    //disable browserSync with --nosync arg
+	if (args.nosync || browserSync.active) {
+		return;
+	}
+    
+	log('***Start pre processes and node server...');
+	var nodeOptions = {
+		script: config.nodeServer,
+		delayTime: 15,
+		env: {
+			'PORT': port,
+			'NODE_ENV': isDev ? 'dev' : 'build'
+		},
+		watch: [config.server]
+	};
+
+	return $.nodemon(nodeOptions)
+		.on('restart', ['vet'], function (ev) {
+			log('*** nodemon restarted');
+			log('files changes on restart:\n' + ev);
+			setTimeout(function () {
+				browserSync.notify('reloading now ...');
+				browserSync.reload({ stream: false });
+			}, config.browserReloadDelay);
+		})
+		.on('start', function () {
+			log('*** nodemon started');
+			startBrowserSync('isDev');
+		})
+		.on('crash', function () {
+			log('*** nodemon crashed: script crashed for some reason');
+		})
+		.on('exit', function () {
+			log('*** nodemon exited cleanly');
+		});
+
+}
+
+function changeEvent(event) {
+	var srcPattern = new RegExp('/.^(?=/' + config.source + ')/');
+	log('File ' + event.path.replace(srcPattern, '') + ' ' + event.type);
+
+}
+
 //General logging function
 function log(msg) {
     if (typeof (msg) === 'object') {

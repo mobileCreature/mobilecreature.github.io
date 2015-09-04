@@ -1,4 +1,7 @@
 module.exports = function () {
+
+        var server = './src/server/';
+
         var config = {
 
                 //clean folder
@@ -39,7 +42,9 @@ module.exports = function () {
 
                 //node settings
                 defaultPort: 7203,
-                nodeServer: './app.js',
+                nodeServer: server + 'app.js',
+
+                server: server,
 
                 //temp folder
                 temp: '.',
