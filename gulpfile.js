@@ -41,9 +41,23 @@ gulp.task('optimize', ['inject', 'wiredep'], function () {
     var assets = $.useref.assets({ searchPath: './' });
 
     var cssFilter = $.filter('**/*.css', { restore: true });
+    var jsLibFilter = $.filter('**/' + config.optimized.lib, { restore: true });
+    
+    var minifyHTMLFilter = $.filter('./index.html', { restore: true });
+
+    var minOpts = {
+        empty: false,
+        cdata: false,
+        comments: false,
+        conditionals: true,
+        spare: false,
+        quotes: false,
+        loose: false
+    };
 
     return gulp
         .src(config.index)
+        
     //error handling
         .pipe($.plumber())
         
@@ -58,6 +72,27 @@ gulp.task('optimize', ['inject', 'wiredep'], function () {
         
     //revised working filter to restore css
         .pipe(cssFilter.restore)
+        
+    //filter down to lib js
+        .pipe(jsLibFilter)
+        
+    //uglify filter to mangle js
+        .pipe($.uglify())
+        
+    //revised working filter to restore js
+        .pipe(jsLibFilter.restore)
+        
+    //output all files back from stream
+        .pipe(assets.restore())
+
+    //select index.html
+        .pipe(minifyHTMLFilter)
+
+    //minfify index.html
+        .pipe($.minifyHTML(minOpts))
+        
+    //restore index.html
+        .pipe(minifyHTMLFilter.restore)
         
     //output all files back from stream
         .pipe(assets.restore())
@@ -79,16 +114,16 @@ gulp.task('inject', ['styles'], function () {
 
 //wiredep and inject to manage index.html scripts and dependencies
 gulp.task('wiredep', function () {
-	log('***Wire up the bower css js and our app js into the html');
+    log('***Wire up the bower css js and our app js into the html');
 
-	var options = config.getWiredepDefaultOptions();
-	var wiredep = require('wiredep').stream;
+    var options = config.getWiredepDefaultOptions();
+    var wiredep = require('wiredep').stream;
 
-	return gulp
-		.src(config.index)
-		.pipe(wiredep(options))
-		.pipe($.inject(gulp.src(config.js)))
-		.pipe(gulp.dest(config.client));
+    return gulp
+        .src(config.index)
+        .pipe(wiredep(options))
+        .pipe($.inject(gulp.src(config.js)))
+        .pipe(gulp.dest(config.client));
 
 });
 
@@ -146,10 +181,10 @@ function serve(isDev) {
 
     return $.nodemon(nodeOptions)
         .on('restart', ['vet'], function (ev) {
-            log('*** nodemon restarted');
+            log('*** nodemon restarted...');
             log('files changes on restart:\n' + ev);
             setTimeout(function () {
-                browserSync.notify('reloading now ...');
+                browserSync.notify('***reloading now ...');
                 browserSync.reload({ stream: false });
             }, config.browserReloadDelay);
         })
@@ -203,12 +238,14 @@ function startBrowserSync(isDev) {
 
     if (isDev) {
 
+        log('*** Starting styles...');
         gulp.watch([config.less], ['styles'])
             .on('change', function (event) {
                 changeEvent(event);
             });
     } else {
 
+        log('*** Starting optimize and reloading browserSync...');
         gulp.watch([config.less, config.html, config.js], ['optimize', browserSync.reload])
             .on('change', function (event) { changeEvent(event); });
 

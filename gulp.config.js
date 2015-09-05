@@ -2,7 +2,7 @@ module.exports = function () {
         var client = './project/src/client/';
         var clientApp = client + 'app/';
         var server = './project/src/server/';
-        var temp = './.tmp/';
+        var temp = './tmp/';
         var config = {
 
                 //clean folder
@@ -57,6 +57,14 @@ module.exports = function () {
 
                 //temp folder
                 temp: temp,
+                
+                /**
+		 * optimized file names
+		 */
+		optimized: {
+			app: 'app.js',
+			lib: 'lib.js'
+		},
                 
                 //set default bower file locations
                 bower: {
