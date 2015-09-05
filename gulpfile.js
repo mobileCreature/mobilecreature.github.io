@@ -104,7 +104,7 @@ gulp.task('optimize', ['inject', 'wiredep'], function () {
 });
 
 gulp.task('inject', ['styles'], function () {
-    log('***Inject the custom css into the app html and call wiredep');
+    log('***Inject the custom css into index.html...');
 
     return gulp
         .src(config.index)

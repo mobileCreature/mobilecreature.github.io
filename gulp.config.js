@@ -5,11 +5,16 @@ module.exports = function () {
         var temp = './tmp/';
         var config = {
 
+                //JavaScript - all js to vet
+                alljs: [
+                        client + 'script.js',
+                        server + 'app.js'
+                ],
+                
                 //clean folder
                 clean: [
                         './*.css',
-                        client + 'styles/*.css',
-                        './.bak/*.less'
+                        client + 'styles/*.css'
                 ],
 
                 build: './project/build/',
@@ -38,12 +43,6 @@ module.exports = function () {
                         '!' + clientApp + '**/*.spec.js'
                 ],
 
-                //JavaScript - all js to vet
-                alljs: [
-                        client + 'script.js',
-                        server + 'app.js'
-                ],
-
                 //less
                 less: client + 'styles/styles.less',
 
@@ -61,10 +60,10 @@ module.exports = function () {
                 /**
 		 * optimized file names
 		 */
-		optimized: {
-			app: 'app.js',
-			lib: 'lib.js'
-		},
+                optimized: {
+                        app: 'app.js',
+                        lib: 'lib.js'
+                },
                 
                 //set default bower file locations
                 bower: {
