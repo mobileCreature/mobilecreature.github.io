@@ -26,7 +26,7 @@ app.use(compress());
 app.use(logger('dev'));
 app.use(cors());
 //app.use(errorHandler.init);
-
+//
 //routes = require('./routes/index')(app);
 
 console.log('About to crank up node');
@@ -46,10 +46,8 @@ switch (environment) {
         break;
     default:
         console.log('** DEV **');
-        app.use(express.static('./project/src/client/'));
         app.use(express.static('./'));
-        app.use(express.static('./tmp/'));
-        app.use('/*', express.static('./project/src/client/index.html'));
+        app.use('/*', express.static('./index.html'));
         break;
 }
 

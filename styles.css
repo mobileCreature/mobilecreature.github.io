@@ -1,0 +1,174 @@
+#navbar {
+  background-color: #E7E7E7;
+  -webkit-filter: none;
+          filter: none;
+}
+.shadowHeading {
+  text-shadow: 2px 1px 2px blue;
+}
+h1 {
+  font-family: 'Expletus+Sans', cursive !important;
+  font-weight: 700 !important;
+  font-size: 36px !important;
+  color: white !important;
+  text-shadow: 2px 1px 2px blue;
+}
+h2 {
+  font-family: 'Montez', cursive !important;
+  color: red !important;
+  text-shadow: 2px 1px 2px black;
+}
+p,
+.lightBackground {
+  font-family: 'Expletus+Sans', cursive;
+  font-weight: 400;
+  color: black;
+}
+p,
+.darkBackground {
+  font-family: 'Expletus+Sans', cursive;
+  font-weight: 400;
+  color: white;
+}
+.expletus {
+  font-family: 'Expletus+Sans', cursive !important;
+  font-weight: 400 important;
+  font-size: 20px important;
+  color: darkred !important;
+}
+.montez {
+  font-family: 'Montez', cursive;
+  font-weight: 400;
+  font-size: 20px;
+  color: darkred !important;
+}
+.btn-default,
+.btn-primary,
+.btn-success,
+.btn-info,
+.btn-warning,
+.btn-danger {
+  box-shadow: 2px 5px 0px rgba(4, 4, 4, 0.3);
+}
+.btn-default:active,
+.btn-primary:active,
+.btn-success:active,
+.btn-info:active,
+.btn-warning:active,
+.btn-danger:active {
+  margin: 3px;
+}
+.btn {
+  opacity: 0.85;
+  /* Opacity for Modern Browsers */
+  filter: alpha(opacity=85);
+  /* Opacity for IE8 and lower */
+  zoom: 1;
+  /* Fix for IE7 */
+  margin-bottom: 5px;
+  border-color: black !important;
+  border-left-width: 2px !important;
+  border-top-width: 2px !important;
+}
+.btn:hover {
+  opacity: 0.85;
+  /* Opacity for Modern Browsers */
+  background-color: black !important;
+  filter: alpha(opacity=85);
+  /* Opacity for IE8 and lower */
+  zoom: 1;
+  /* Fix for IE7 */
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+  -webkit-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+  color: #fff !important;
+  box-shadow: shake !important;
+  -moz-box-shadow: shake !important;
+  -webkit-box-shadow: shake !important;
+  -webkit-animation-name: shake !important;
+          animation-name: shake !important;
+  animation-duration: .5s !important;
+  -moz-animation-duration: .5s !important;
+  -webkit-animation-duration: .5s !important;
+}
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-1px);
+            transform: translateX(-1px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(1px);
+            transform: translateX(1px);
+  }
+}
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-1px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(1px);
+  }
+}
+hr {
+  width: 90%;
+  height: 5px;
+  background: #000;
+}
+.home {
+  display: table;
+  background: url(http://i.imgur.com/AIucynO.jpg) no-repeat center center fixed;
+  height: 1000px;
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  margin-top: 50px;
+  padding-top: 150px;
+}
+.about {
+  display: table;
+  background: url(http://i.imgur.com/J4jDj3Q.jpg) no-repeat center center fixed;
+  height: 1000px;
+  position: relative;
+  width: 100%;
+  background-size: cover;
+}
+.portfolio {
+  display: table;
+  background: url(http://i.imgur.com/tSK969P.jpg) no-repeat center center fixed;
+  height: 1000px;
+  position: relative;
+  width: 100%;
+  background-size: cover;
+}
+.contact {
+  display: table;
+  background: url(http://i.imgur.com/3B2hNnW.jpg) no-repeat center center fixed;
+  height: 1000px;
+  position: relative;
+  width: 100%;
+  background-size: cover;
+}

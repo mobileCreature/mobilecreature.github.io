@@ -23,6 +23,7 @@
     "eslint-stylish": "^0.2.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
+    "gulp-copy": "0.0.2",
     "gulp-csso": "^1.0.0",
     "gulp-filter": "^3.0.0",
     "gulp-if": "^1.2.5",
