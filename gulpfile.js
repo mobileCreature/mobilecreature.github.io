@@ -173,8 +173,17 @@ function startBrowserSync() {
 
     log('***Starting browserSync on port ' + port);
 
-    log('*** Starting css-prep...');
-    gulp.watch([config.less, config.index, config.js], ['css-prep', browserSync.reload])
+    gulp.watch(config.less, ['css-prep', browserSync.stream])
+        .on('change', function (event) {
+            changeEvent(event);
+        });
+
+    gulp.watch(config.js, ['vet', browserSync.reload])
+        .on('change', function (event) {
+            changeEvent(event);
+        });
+
+    gulp.watch(config.index, browserSync.reload)
         .on('change', function (event) {
             changeEvent(event);
         });
