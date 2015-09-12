@@ -1,22 +1,71 @@
+h1 {
+  font-family: 'Expletus+Sans', cursive !important;
+  font-weight: 700 !important;
+  color: white !important;
+  text-shadow: 2px 1px 2px blue;
+}
+@media only screen and (min-device-width: 1200px) {
+  h1 {
+    font-size: 76px;
+  }
+}
+@media only screen and (min-device-width: 980px) and (max-device-width: 1199px) {
+  h1 {
+    font-size: 66px;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 979px) {
+  h1 {
+    font-size: 56px;
+  }
+}
+@media only screen and (min-device-width: 481px) and (max-device-width: 767px) {
+  h1 {
+    font-size: 46px;
+  }
+}
+@media only screen and (max-device-width: 480px) {
+  h1 {
+    font-size: 36px;
+  }
+}
+h2 {
+  font-family: 'Montez', cursive !important;
+  color: red !important;
+  text-shadow: 2px 1px 2px black;
+}
+@media only screen and (min-device-width: 1200px) {
+  h2 {
+    font-size: 66px;
+  }
+}
+@media only screen and (min-device-width: 980px) and (max-device-width: 1199px) {
+  h2 {
+    font-size: 56px;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 979px) {
+  h2 {
+    font-size: 46px;
+  }
+}
+@media only screen and (min-device-width: 481px) and (max-device-width: 767px) {
+  h2 {
+    font-size: 36px;
+  }
+}
+@media only screen and (max-device-width: 480px) {
+  h2 {
+    font-size: 26px;
+  }
+}
 #navbar {
   background-color: #E7E7E7;
   -webkit-filter: none;
           filter: none;
 }
 .shadowHeading {
-  text-shadow: 2px 1px 2px green;
-}
-h1 {
-  font-family: 'Expletus+Sans', cursive !important;
-  font-weight: 700 !important;
-  font-size: 36px !important;
-  color: white !important;
-  text-shadow: 2px 1px 2px green;
-}
-h2 {
-  font-family: 'Montez', cursive !important;
-  color: red !important;
-  text-shadow: 2px 1px 2px black;
+  text-shadow: 2px 1px 2px blue;
 }
 p,
 .lightBackground {
@@ -29,12 +78,6 @@ p,
   font-family: 'Expletus+Sans', cursive;
   font-weight: 400;
   color: white;
-}
-.expletus {
-  font-family: 'Expletus+Sans', cursive !important;
-  font-weight: 400 important;
-  font-size: 20px important;
-  color: darkred !important;
 }
 .montez {
   font-family: 'Montez', cursive;
@@ -145,7 +188,6 @@ hr {
   position: relative;
   width: 100%;
   background-size: cover;
-  margin-top: 50px;
   padding-top: 150px;
 }
 .about {

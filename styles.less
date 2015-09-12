@@ -1,5 +1,5 @@
 @heading1Color: white;
-@heading1ColorShadow: green;
+@heading1ColorShadow: blue;
 
 @heading2Color: red;
 @heading2ColorShadow: black;
@@ -13,6 +13,75 @@
 
 @greyShadow: rgba(0, 0, 0, 0.3);
 @blackShadow: rgba(0, 0, 0, 0.7);
+
+@h1-font-size--xlarge: 76px;
+@h1-font-size--large: 66px;
+@h1-font-size--medium: 56px;
+@h1-font-size--small: 46px;
+@h1-font-size--xsmall: 36px;
+
+@h2-font-size--xlarge: 66px;
+@h2-font-size--large: 56px;
+@h2-font-size--medium: 46px;
+@h2-font-size--small: 36px;
+@h2-font-size--xsmall: 26px;
+
+@screen-xlg-min: 1200px;
+
+@screen-lg-max: 1199px;
+@screen-lg-min: 980px;
+
+@screen-md-max: 979px;
+@screen-md-min: 768px;
+
+@screen-sm-max: 767px;
+@screen-sm-min: 481px;
+
+@screen-xs-max: 480px;
+
+h1 {
+	font-family: 'Expletus+Sans', cursive !important ;
+	font-weight: 700 !important;
+	color: @heading1Color !important;
+	text-shadow: 2px 1px 2px @heading1ColorShadow;
+	@media only screen and (min-device-width: @screen-xlg-min) {
+		font-size: @h1-font-size--xlarge;
+	}
+	@media only screen and (min-device-width: @screen-lg-min) and (max-device-width: @screen-lg-max) {
+		font-size: @h1-font-size--large;
+	}
+	@media only screen and (min-device-width: @screen-md-min) and (max-device-width: @screen-md-max){
+		font-size: @h1-font-size--medium;
+	}
+	@media only screen and (min-device-width: @screen-sm-min) and (max-device-width: @screen-sm-max){
+		font-size: @h1-font-size--small;
+	}
+	@media only screen and (max-device-width: @screen-xs-max) {
+		font-size: @h1-font-size--xsmall;
+	}
+}
+
+h2 {
+	font-family: 'Montez', cursive !important;
+	color: @heading2Color !important;
+	text-shadow: 2px 1px 2px @heading2ColorShadow;
+	@media only screen and (min-device-width: @screen-xlg-min) {
+		font-size: @h2-font-size--xlarge;
+	}
+	@media only screen and (min-device-width: @screen-lg-min) and (max-device-width: @screen-lg-max) {
+		font-size: @h2-font-size--large;
+	}
+	@media only screen and (min-device-width: @screen-md-min) and (max-device-width: @screen-md-max){
+		font-size: @h2-font-size--medium;
+	}
+	@media only screen and (min-device-width: @screen-sm-min) and (max-device-width: @screen-sm-max){
+		font-size: @h2-font-size--small;
+	}
+	@media only screen and (max-device-width: @screen-xs-max) {
+		font-size: @h2-font-size--xsmall;
+	}
+}
+
 
 #navbar {
 	background-color: #E7E7E7;
@@ -42,18 +111,6 @@
 .shadowHeading {
 	text-shadow: 2px 1px 2px @heading1ColorShadow;
 }
-h1 {
-    	font-family: 'Expletus+Sans', cursive !important ;
-		font-weight: 700 !important;
-		font-size: 36px !important;
-		color: @heading1Color !important;
-		text-shadow: 2px 1px 2px @heading1ColorShadow;
-}
-h2 {
-		font-family: 'Montez', cursive !important;
-		color: @heading2Color !important;
-		text-shadow: 2px 1px 2px @heading2ColorShadow;
-}
 p, .lightBackground{
     	font-family: 'Expletus+Sans', cursive;
 		font-weight: 400;
@@ -64,13 +121,13 @@ p, .darkBackground{
 		font-weight: 400;
 		color:white;
 }
-.expletus {
-    	font-family: 'Expletus+Sans', cursive !important ;
-		font-weight: 400 important;
-		font-size: 20px important;
-		color: darkred !important;
-
-}
+// .expletus {
+//     	font-family: 'Expletus+Sans', cursive !important ;
+// 		font-weight: 400 important;
+// 		font-size: 20px important;
+// 		color: darkred !important;
+//
+// }
 .montez {
     	font-family: 'Montez', cursive;
 		font-weight: 400;
@@ -137,7 +194,7 @@ hr {
 	position: relative;
 	width: 100%;
 	background-size: cover;
-	margin-top: 50px;
+	// margin-top: 50px;
 	padding-top: 150px;
 }
 .about {
