@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Montez|Expletus+Sans:400,400italic,500,500italic,600,600italic,700,700italic);
 h1 {
   font-family: 'Expletus Sans', cursive;
   font-weight: 700;
@@ -10,24 +11,16 @@ h1 {
   }
 }
 @media only screen and (min-device-width: 980px) and (max-device-width: 1199px) {
-  h1 {
-    font-size: 66px;
-  }
+  font-size: 66px;
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 979px) {
-  h1 {
-    font-size: 56px;
-  }
+  font-size: 56px;
 }
 @media only screen and (min-device-width: 481px) and (max-device-width: 767px) {
-  h1 {
-    font-size: 46px;
-  }
+  font-size: 46px;
 }
 @media only screen and (max-device-width: 480px) {
-  h1 {
-    font-size: 36px;
-  }
+  font-size: 36px;
 }
 h2 {
   font-family: 'Montez', cursive;
@@ -97,12 +90,6 @@ p,
   font-family: 'Expletus+Sans', cursive;
   font-weight: 400;
   color: white;
-}
-.montez {
-  font-family: 'Montez', cursive;
-  font-weight: 400;
-  font-size: 20px;
-  color: darkred !important;
 }
 .btn-default,
 .btn-primary,
@@ -199,6 +186,9 @@ hr {
   width: 90%;
   height: 5px;
   background: #000;
+}
+.section {
+  padding-top: 30px;
 }
 .home {
   display: table;
