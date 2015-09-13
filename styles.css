@@ -1,5 +1,5 @@
 h1 {
-  font-family: 'Expletus+Sans', cursive;
+  font-family: 'Expletus Sans', cursive;
   font-weight: 700;
   color: darkred;
   text-shadow: 2px 1px 2px lightblue;
@@ -72,6 +72,7 @@ h2 {
   background-color: lightgrey;
 }
 .navbar-brand {
+  font-family: 'Expletus Sans', cursive;
   color: darkblue !important;
 }
 .navbar-brand:hover {
@@ -127,14 +128,14 @@ p,
   zoom: 1;
   /* Fix for IE7 */
   margin-bottom: 5px;
-  border-color: black !important;
+  border-color: darkblue !important;
   border-left-width: 2px !important;
   border-top-width: 2px !important;
 }
 .btn:hover {
   opacity: 0.85;
   /* Opacity for Modern Browsers */
-  background-color: black !important;
+  background-color: darkblue !important;
   filter: alpha(opacity=85);
   /* Opacity for IE8 and lower */
   zoom: 1;
