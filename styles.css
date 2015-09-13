@@ -72,14 +72,14 @@ h2 {
   background-color: lightgrey;
 }
 .navbar-brand {
-  font-family: 'Expletus Sans', cursive;
+  font-family: 'Expletus Sans', cursive;;
   color: darkblue !important;
 }
 .navbar-brand:hover {
   color: darkred !important;
 }
 ul.nav li a {
-  font-family: 'Montez', cursive;
+  font-family: 'Montez', cursive;;
   color: darkblue !important;
 }
 ul.nav li a:hover {
@@ -90,7 +90,7 @@ ul.nav li a:hover {
   padding-top: 25px;
 }
 .footer .container a {
-  font-family: montez;
+  font-family: 'Montez', cursive;;
   padding-right: 10px;
   padding-left: 10px;
   color: darkblue;
