@@ -1,8 +1,8 @@
 h1 {
-  font-family: 'Expletus+Sans', cursive !important;
-  font-weight: 700 !important;
-  color: white !important;
-  text-shadow: 2px 1px 2px blue;
+  font-family: 'Expletus+Sans', cursive;
+  font-weight: 700;
+  color: darkred;
+  text-shadow: 2px 1px 2px lightblue;
 }
 @media only screen and (min-device-width: 1200px) {
   h1 {
@@ -30,9 +30,9 @@ h1 {
   }
 }
 h2 {
-  font-family: 'Montez', cursive !important;
-  color: red !important;
-  text-shadow: 2px 1px 2px black;
+  font-family: 'Montez', cursive;
+  color: white;
+  text-shadow: 2px 1px 2px blue;
 }
 @media only screen and (min-device-width: 1200px) {
   h2 {
@@ -64,8 +64,26 @@ h2 {
   -webkit-filter: none;
           filter: none;
 }
-.shadowHeading {
-  text-shadow: 2px 1px 2px blue;
+.navbar-header {
+  padding-left: 15px;
+  background-color: #E7E7E7;
+}
+.navbar-header:hover {
+  background-color: lightgrey;
+}
+.navbar-brand {
+  color: darkblue !important;
+}
+.navbar-brand:hover {
+  color: darkred !important;
+}
+ul.nav li a {
+  font-family: 'Montez', cursive;
+  color: darkblue !important;
+}
+ul.nav li a:hover {
+  color: darkred !important;
+  background-color: lightgrey !important;
 }
 p,
 .lightBackground {
