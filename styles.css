@@ -1,5 +1,5 @@
 h1 {
-  font-family: 'Expletus Sans', cursive;
+  font-family: 'Expletus Sans', cursive;;
   font-weight: 700;
   color: darkred;
   text-shadow: 2px 1px 2px lightblue;
@@ -10,19 +10,27 @@ h1 {
   }
 }
 @media only screen and (min-device-width: 980px) and (max-device-width: 1199px) {
-  font-size: 66px;
+  h1 {
+    font-size: 66px;
+  }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 979px) {
-  font-size: 56px;
+  h1 {
+    font-size: 56px;
+  }
 }
 @media only screen and (min-device-width: 481px) and (max-device-width: 767px) {
-  font-size: 46px;
+  h1 {
+    font-size: 46px;
+  }
 }
 @media only screen and (max-device-width: 480px) {
-  font-size: 36px;
+  h1 {
+    font-size: 36px;
+  }
 }
 h2 {
-  font-family: 'Montez', cursive;
+  font-family: 'Montez', cursive;;
   color: white;
   text-shadow: 2px 1px 2px blue;
 }
@@ -52,13 +60,13 @@ h2 {
   }
 }
 #navbar {
-  background-color: #E7E7E7;
+  background-color: #e7e7e7;
   -webkit-filter: none;
           filter: none;
 }
 .navbar-header {
   padding-left: 15px;
-  background-color: #E7E7E7;
+  background-color: #e7e7e7;
 }
 .navbar-header:hover {
   background-color: lightgrey;
@@ -78,17 +86,26 @@ ul.nav li a:hover {
   color: darkred !important;
   background-color: lightgrey !important;
 }
-p,
-.lightBackground {
-  font-family: 'Expletus+Sans', cursive;
-  font-weight: 400;
-  color: black;
+.footer {
+  padding-top: 25px;
 }
-p,
-.darkBackground {
-  font-family: 'Expletus+Sans', cursive;
-  font-weight: 400;
-  color: white;
+.footer .container a {
+  font-family: montez;
+  padding-right: 10px;
+  padding-left: 10px;
+  color: darkblue;
+  margin-top: 25px;
+}
+.footer .container a:hover {
+  color: darkred;
+  text-decoration: none;
+}
+#footer {
+  font-family: 'Expletus Sans', cursive;;
+  padding-top: 15px;
+  padding-left: 10px;
+  font-size: 8px;
+  color: darkblue;
 }
 .btn-default,
 .btn-primary,
