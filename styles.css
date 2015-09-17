@@ -4,60 +4,98 @@ h1 {
   color: darkred;
   text-shadow: 2px 1px 2px lightblue;
 }
+h2 {
+  font-family: 'Montez', cursive;;
+  color: white;
+  text-shadow: 2px 1px 2px darkblue;
+}
+h3 {
+  font-family: 'Expletus Sans', cursive;;
+  font-weight: 700;
+  color: darkred;
+  text-shadow: 2px 1px 2px lightblue;
+}
 @media only screen and (min-device-width: 1200px) {
   h1 {
     font-size: 76px;
   }
+  h2 {
+    font-size: 66px;
+  }
+  h3 {
+    font-size: 46px;
+  }
 }
 @media only screen and (min-device-width: 980px) and (max-device-width: 1199px) {
   h1 {
     font-size: 66px;
+  }
+  h2 {
+    font-size: 56px;
+  }
+  h3 {
+    font-size: 41px;
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 979px) {
   h1 {
     font-size: 56px;
   }
+  h2 {
+    font-size: 46px;
+  }
+  h3 {
+    font-size: 36px;
+  }
 }
 @media only screen and (min-device-width: 481px) and (max-device-width: 767px) {
   h1 {
     font-size: 46px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  h3 {
+    font-size: 31px;
   }
 }
 @media only screen and (max-device-width: 480px) {
   h1 {
     font-size: 36px;
   }
-}
-h2 {
-  font-family: 'Montez', cursive;;
-  color: white;
-  text-shadow: 2px 1px 2px blue;
-}
-@media only screen and (min-device-width: 1200px) {
-  h2 {
-    font-size: 66px;
-  }
-}
-@media only screen and (min-device-width: 980px) and (max-device-width: 1199px) {
-  h2 {
-    font-size: 56px;
-  }
-}
-@media only screen and (min-device-width: 768px) and (max-device-width: 979px) {
-  h2 {
-    font-size: 46px;
-  }
-}
-@media only screen and (min-device-width: 481px) and (max-device-width: 767px) {
-  h2 {
-    font-size: 36px;
-  }
-}
-@media only screen and (max-device-width: 480px) {
   h2 {
     font-size: 26px;
   }
+  h3 {
+    font-size: 26px;
+  }
+}
+p,
+.lightBackground {
+  font-family: 'Open Sans', sans-serif;;
+  font-weight: 600;
+  font-size: 20px;
+  color: black;
+  margin: 10px;
+}
+.site-text {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-color: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 2px 5px 0px rgba(4, 4, 4, 0.5);
+}
+img {
+  padding: 25px;
+  border-radius: 50%;
+}
+.shadowLight {
+  text-shadow: 2px 1px 2px darkgrey;
+  color: rgba(255, 255, 255, 0.7);
+}
+.shadowDark {
+  text-shadow: 2px 1px 2px darkred;
+  color: rgba(0, 0, 0, 0.7);
 }
 #navbar {
   background-color: #e7e7e7;
@@ -124,6 +162,7 @@ ul.nav li a:hover {
   margin: 3px;
 }
 .btn {
+  font-family: 'Expletus Sans', cursive;;
   opacity: 0.85;
   /* Opacity for Modern Browsers */
   filter: alpha(opacity=85);
@@ -136,9 +175,11 @@ ul.nav li a:hover {
   border-top-width: 2px !important;
 }
 .btn:hover {
+  color: #fff !important;
+  background-color: darkblue !important;
+  border-color: darkred !important;
   opacity: 0.85;
   /* Opacity for Modern Browsers */
-  background-color: darkblue !important;
   filter: alpha(opacity=85);
   /* Opacity for IE8 and lower */
   zoom: 1;
@@ -147,7 +188,6 @@ ul.nav li a:hover {
           transform: scale(1.04);
   -webkit-transition: all 0.5s ease-in-out;
           transition: all 0.5s ease-in-out;
-  color: #fff !important;
   box-shadow: shake !important;
   -moz-box-shadow: shake !important;
   -webkit-box-shadow: shake !important;
@@ -156,6 +196,9 @@ ul.nav li a:hover {
   animation-duration: .5s !important;
   -moz-animation-duration: .5s !important;
   -webkit-animation-duration: .5s !important;
+}
+.btn:hover:before {
+  content: "Click! ";
 }
 @keyframes shake {
   0%,

@@ -1,17 +1,21 @@
+// @import url(https://fonts.googleapis.com/css?family=Montez|Expletus+Sans:400,400italic,500,500italic,600,600italic,700,700italic);
+
 @mainFont: ~"'Expletus Sans', cursive;";
 @accentFont: ~"'Montez', cursive;";
+@textFont: ~"'Open Sans', sans-serif;";
 
 @h1Color: darkred;
 @h1ShadowColor: lightblue;
 
 @h2Color: white;
-@h2ShadowColor: blue;
+@h2ShadowColor: darkblue;
 
 @navColor: darkblue;
 @navColorHover: darkred;
 @navBackgroundColor: #E7E7E7;
 @navBackgroundColorHover: lightgrey;
 
+@textColor: black;
 @textColorLight: white;
 
 @shadowColor: darkgrey;
@@ -21,16 +25,23 @@
 @blackShadow: rgba(0, 0, 0, 0.7);
 
 @h1-font-size--xlarge: 76px;
-@h1-font-size--large: 66px;
-@h1-font-size--medium: 56px;
-@h1-font-size--small: 46px;
-@h1-font-size--xsmall: 36px;
+@h1-font-size--large: @h1-font-size--xlarge - 10;
+@h1-font-size--medium: @h1-font-size--large - 10;
+@h1-font-size--small: @h1-font-size--medium - 10;
+@h1-font-size--xsmall: @h1-font-size--small - 10;
 
 @h2-font-size--xlarge: 66px;
-@h2-font-size--large: 56px;
-@h2-font-size--medium: 46px;
-@h2-font-size--small: 36px;
-@h2-font-size--xsmall: 26px;
+@h2-font-size--large: @h2-font-size--xlarge - 10;
+@h2-font-size--medium: @h2-font-size--large - 10;
+@h2-font-size--small: @h2-font-size--medium - 10;
+@h2-font-size--xsmall: @h2-font-size--small - 10;
+
+@h3-font-size--xlarge: 46px;
+@h3-font-size--large: @h3-font-size--xlarge - 5;
+@h3-font-size--medium: @h3-font-size--large - 5;
+@h3-font-size--small: @h3-font-size--medium - 5;
+@h3-font-size--xsmall: @h3-font-size--small - 5;
+
 
 @screen-xlg-min: 1200px;
 
@@ -51,62 +62,109 @@ h1 {
 	color: @h1Color;
 	text-shadow: 2px 1px 2px @h1ShadowColor;
 }
+h2 {
+	font-family: @accentFont;
+	color: @h2Color;
+	text-shadow: 2px 1px 2px @h2ShadowColor;
+}
+h3 {
+	font-family: @mainFont;
+	font-weight: 700;
+	color: @h1Color;
+	text-shadow: 2px 1px 2px @h1ShadowColor;
+}
 @media only screen and (min-device-width: @screen-xlg-min) {
 	h1 {
 	font-size: @h1-font-size--xlarge;
+	}
+	h2 {
+		font-size: @h2-font-size--xlarge;
+	}
+	h3 {
+		font-size: @h3-font-size--xlarge;
 	}
 }
 @media only screen and (min-device-width: @screen-lg-min) and (max-device-width: @screen-lg-max) {
 	h1 {
 		font-size: @h1-font-size--large;
 	}
-}
-@media only screen and (min-device-width: @screen-md-min) and (max-device-width: @screen-md-max){
-		h1 {
-		font-size: @h1-font-size--medium;
-	}
-}
-@media only screen and (min-device-width: @screen-sm-min) and (max-device-width: @screen-sm-max){
-		h1 {
-		font-size: @h1-font-size--small;
-	}
-}
-@media only screen and (max-device-width: @screen-xs-max) {
-		h1 {
-		font-size: @h1-font-size--xsmall;
-	}
-}
-
-h2 {
-	font-family: @accentFont;
-	color: @h2Color;
-	text-shadow: 2px 1px 2px @h2ShadowColor;
-}
-@media only screen and (min-device-width: @screen-xlg-min) {
-	h2 {
-		font-size: @h2-font-size--xlarge;
-	}
-}
-@media only screen and (min-device-width: @screen-lg-min) and (max-device-width: @screen-lg-max) {
 	h2  {
 		font-size: @h2-font-size--large;
 	}
+	h3 {
+		font-size: @h3-font-size--large;
+	}
 }
 @media only screen and (min-device-width: @screen-md-min) and (max-device-width: @screen-md-max){
+	h1 {
+		font-size: @h1-font-size--medium;
+	}
 	h2 {
 		font-size: @h2-font-size--medium;
 	}
+	h3 {
+		font-size: @h3-font-size--medium;
+	}
 }
 @media only screen and (min-device-width: @screen-sm-min) and (max-device-width: @screen-sm-max){
+
+	h1 {
+		font-size: @h1-font-size--small;
+	}
 	h2 {
 		font-size: @h2-font-size--small;
 	}
+	h3 {
+		font-size: @h3-font-size--small;
+	}
 }
 @media only screen and (max-device-width: @screen-xs-max) {
+	h1 {
+		font-size: @h1-font-size--xsmall;
+	}
 	h2{
 		font-size: @h2-font-size--xsmall;
 	}
+	h3 {
+		font-size: @h3-font-size--xsmall;
+	}
 }
+p, .lightBackground{
+    	font-family: @textFont;
+		font-weight: 600;
+		font-size: 20px;
+		color: @textColor;
+		margin: 10px;
+}
+.site-text {
+	background-color: rgba(255, 255, 255, 0.6);
+	border-color: white;
+	border-radius: 20px;
+	padding: 25px;
+	-webkit-box-shadow: 2px 5px 0px rgba(4, 4, 4, 0.5);
+    -moz-box-shadow:    2px 5px 0px rgba(4, 4, 4, 0.5);
+    box-shadow:         2px 5px 0px rgba(4, 4, 4, 0.5);
+}
+
+img {
+	padding: 25px;
+	border-radius: 50%;
+}
+// p, .darkBackground{
+//     	font-family: 'Expletus+Sans', cursive;
+// 		font-weight: 400;
+// 		color:white;
+// }
+
+.shadowLight {
+	text-shadow: 2px 1px 2px @shadowColor;
+	color: rgba(255, 255, 255, 0.7);
+}
+.shadowDark {
+	text-shadow: 2px 1px 2px @accentShadowColor;
+	color: rgba(0, 0, 0, 0.7);
+}
+
 
 #navbar {
 	background-color: @navBackgroundColor;
@@ -162,25 +220,6 @@ ul.nav li a {
 
 }
 
-// .shadowLight {
-// 	text-shadow: 2px 1px 2px @heading;
-// 	color: rgba(255, 255, 255, 0.7);
-// }
-// // .shadowDark {
-// 	text-shadow: 2px 1px 2px @textColor;
-// 	color: rgba(0, 0, 0, 0.7);
-// }
-//
-// p, .lightBackground{
-//     	font-family: 'Expletus+Sans', cursive;
-// 		font-weight: 400;
-// 		color: black;
-// }
-// p, .darkBackground{
-//     	font-family: 'Expletus+Sans', cursive;
-// 		font-weight: 400;
-// 		color:white;
-// }
 .btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger {
     -webkit-box-shadow: 2px 5px 0px rgba(4, 4, 4, 0.3);
     -moz-box-shadow:    2px 5px 0px rgba(4, 4, 4, 0.3);
@@ -189,24 +228,29 @@ ul.nav li a {
 .btn-default:active,.btn-primary:active,.btn-success:active,.btn-info:active,.btn-warning:active,.btn-danger:active {
     margin: 3px;
 }
+
 .btn {
+	font-family: @mainFont;
 	opacity: 0.85;  /* Opacity for Modern Browsers */
     filter: alpha(opacity=85);  /* Opacity for IE8 and lower */
     zoom: 1;  /* Fix for IE7 */
 	margin-bottom: 5px;
-	border-color: darkblue !important;
+	border-color: @navColor !important;
 	border-left-width: 2px !important;
 	border-top-width: 2px !important;
 }
 .btn:hover {
+
+	color: #fff !important;
+	background-color: @navColor !important;
+	border-color: @navColorHover !important;
 	opacity: 0.85;  /* Opacity for Modern Browsers */
-	background-color: darkblue !important;
+
     filter: alpha(opacity=85);  /* Opacity for IE8 and lower */
     zoom: 1;  /* Fix for IE7 */
 	transform: scale(1.040);
 	transition: all .5s ease-in-out;
 
-	color: #fff !important;
 	box-shadow: shake !important;
 	-moz-box-shadow: shake !important;
 	-webkit-box-shadow: shake !important;
@@ -214,6 +258,9 @@ ul.nav li a {
 	animation-duration: .5s !important;
 	-moz-animation-duration: .5s !important;
 	-webkit-animation-duration: .5s !important;
+}
+.btn:hover:before {
+		content: "Click! ";
 }
 @keyframes shake {
     0%, 100% {transform: translateX(0);}
