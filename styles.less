@@ -73,7 +73,7 @@ h3 {
 	color: @h1Color;
 	text-shadow: 2px 1px 2px @h1ShadowColor;
 }
-@media only screen and (min-device-width: @screen-xlg-min) {
+@media only screen and (min-width: @screen-xlg-min) {
 	h1 {
 	font-size: @h1-font-size--xlarge;
 	}
@@ -84,7 +84,7 @@ h3 {
 		font-size: @h3-font-size--xlarge;
 	}
 }
-@media only screen and (min-device-width: @screen-lg-min) and (max-device-width: @screen-lg-max) {
+@media only screen and (min-width: @screen-lg-min) and (max-width: @screen-lg-max) {
 	h1 {
 		font-size: @h1-font-size--large;
 	}
@@ -95,7 +95,7 @@ h3 {
 		font-size: @h3-font-size--large;
 	}
 }
-@media only screen and (min-device-width: @screen-md-min) and (max-device-width: @screen-md-max){
+@media only screen and (min-width: @screen-md-min) and (max-width: @screen-md-max){
 	h1 {
 		font-size: @h1-font-size--medium;
 	}
@@ -106,7 +106,7 @@ h3 {
 		font-size: @h3-font-size--medium;
 	}
 }
-@media only screen and (min-device-width: @screen-sm-min) and (max-device-width: @screen-sm-max){
+@media only screen and (min-width: @screen-sm-min) and (max-width: @screen-sm-max){
 
 	h1 {
 		font-size: @h1-font-size--small;
@@ -118,7 +118,7 @@ h3 {
 		font-size: @h3-font-size--small;
 	}
 }
-@media only screen and (max-device-width: @screen-xs-max) {
+@media only screen and (max-width: @screen-xs-max) {
 	h1 {
 		font-size: @h1-font-size--xsmall;
 	}
@@ -149,7 +149,12 @@ p, .lightBackground{
 img {
 	padding: 25px;
 	border-radius: 50%;
+	&:hover {
+		content: url("http://i.imgur.com/X0ubtV9.jpg");
+	}
 }
+
+
 // p, .darkBackground{
 //     	font-family: 'Expletus+Sans', cursive;
 // 		font-weight: 400;
