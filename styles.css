@@ -7,7 +7,7 @@ h1 {
 h2 {
   font-family: 'Montez', cursive;;
   color: white;
-  text-shadow: 2px 1px 2px darkblue;
+  text-shadow: 2px 1px 2px #144867;
 }
 h3 {
   font-family: 'Expletus Sans', cursive;;
@@ -90,7 +90,7 @@ img {
   border-radius: 50%;
 }
 img:hover {
-  content: url("http://i.imgur.com/X0ubtV9.jpg");
+  content: url("http://i.imgur.com/E1LjfbD.jpg");
 }
 .shadowLight {
   text-shadow: 2px 1px 2px darkgrey;
@@ -114,14 +114,14 @@ img:hover {
 }
 .navbar-brand {
   font-family: 'Expletus Sans', cursive;;
-  color: darkblue !important;
+  color: #266b8e !important;
 }
 .navbar-brand:hover {
   color: darkred !important;
 }
 ul.nav li a {
   font-family: 'Montez', cursive;;
-  color: darkblue !important;
+  color: #266b8e !important;
 }
 ul.nav li a:hover {
   color: darkred !important;
@@ -134,7 +134,7 @@ ul.nav li a:hover {
   font-family: 'Montez', cursive;;
   padding-right: 10px;
   padding-left: 10px;
-  color: darkblue;
+  color: #266b8e;
   margin-top: 25px;
 }
 .footer .container a:hover {
@@ -146,7 +146,7 @@ ul.nav li a:hover {
   padding-top: 15px;
   padding-left: 10px;
   font-size: 8px;
-  color: darkblue;
+  color: #266b8e;
 }
 .btn-default,
 .btn-primary,
@@ -173,13 +173,13 @@ ul.nav li a:hover {
   zoom: 1;
   /* Fix for IE7 */
   margin-bottom: 5px;
-  border-color: darkblue !important;
+  border-color: #266b8e !important;
   border-left-width: 2px !important;
   border-top-width: 2px !important;
 }
 .btn:hover {
   color: #fff !important;
-  background-color: darkblue !important;
+  background-color: #266b8e !important;
   border-color: darkred !important;
   opacity: 0.85;
   /* Opacity for Modern Browsers */

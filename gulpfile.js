@@ -208,7 +208,7 @@ function startBrowserSync() {
         logLevel: 'debug',
         logPrefix: '*** browserSync',
         notify: true,
-        reloadDelay: 3000,
+        reloadDelay: 15000,
         open: false,
         scrollRestoreTechnique: 'cookie',
         scrollProportionally: 'true'
