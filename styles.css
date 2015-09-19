@@ -87,9 +87,9 @@ p,
 }
 img {
   padding: 25px;
-  border-radius: 50%;
+  border-radius: 20px;
 }
-img:hover {
+.images:hover {
   content: url("http://i.imgur.com/E1LjfbD.jpg");
 }
 .shadowLight {
