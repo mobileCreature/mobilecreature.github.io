@@ -81,7 +81,7 @@ p,
 .site-text {
   background-color: rgba(255, 255, 255, 0.6);
   border-color: white;
-  border-radius: 20px;
+  border-radius: 5px;
   padding: 25px;
   box-shadow: 2px 5px 0px rgba(4, 4, 4, 0.5);
 }
@@ -144,8 +144,7 @@ ul.nav li a:hover {
 #footer {
   font-family: 'Expletus Sans', cursive;;
   padding-top: 15px;
-  padding-left: 10px;
-  font-size: 8px;
+  font-size: 10px;
   color: #266b8e;
 }
 .btn-default,
@@ -199,9 +198,6 @@ ul.nav li a:hover {
   animation-duration: .5s !important;
   -moz-animation-duration: .5s !important;
   -webkit-animation-duration: .5s !important;
-}
-.btn:hover:before {
-  content: "Click! ";
 }
 @keyframes shake {
   0%,
@@ -280,7 +276,7 @@ hr {
 .contact {
   display: table;
   background: url(http://i.imgur.com/3B2hNnW.jpg) no-repeat center center fixed;
-  height: 1000px;
+  height: 850px;
   position: relative;
   width: 100%;
   background-size: cover;
