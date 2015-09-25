@@ -129,7 +129,7 @@ h3 {
 		font-size: @h3-font-size--xsmall;
 	}
 }
-p, .lightBackground{
+p {
     	font-family: @textFont;
 		font-weight: 600;
 		font-size: 20px;
@@ -145,8 +145,10 @@ p, .lightBackground{
 	-webkit-box-shadow: 2px 5px 0px rgba(4, 4, 4, 0.5);
     -moz-box-shadow:    2px 5px 0px rgba(4, 4, 4, 0.5);
     box-shadow:         2px 5px 0px rgba(4, 4, 4, 0.5);
+	a:hover {
+	text-decoration: none;
+	}
 }
-
 img {
 	// padding: 25px;
 	// border-radius: 20px;
@@ -154,29 +156,13 @@ img {
 	// 	content: url("http://i.imgur.com/X0ubtV9.jpg");
 	// }
 }
-
 .images {
 	&:hover {
 		content: url("http://i.imgur.com/E1LjfbD.jpg");
+		// transform: scale(1.040);
+		transition: all 3s ease-in-out;
 	}
 }
-
-// p, .darkBackground{
-//     	font-family: 'Expletus+Sans', cursive;
-// 		font-weight: 400;
-// 		color:white;
-// }
-
-.shadowLight {
-	text-shadow: 2px 1px 2px @shadowColor;
-	color: rgba(255, 255, 255, 0.7);
-}
-.shadowDark {
-	text-shadow: 2px 1px 2px @accentShadowColor;
-	color: rgba(0, 0, 0, 0.7);
-}
-
-
 #navbar {
 	background-color: @navBackgroundColor;
 	filter:none;
@@ -197,78 +183,87 @@ img {
 }
 ul.nav li a {
 	font-family: @accentFont;
-	& {
-		color: @navColor !important;
-	}
+	color: @navColor !important;
 	&:hover {
 		color: @navColorHover !important;
 		background-color: lightgrey !important;
 	}
 }
-.footer{
-	padding-top: 25px;
-	.container {
-		a {
-			font-family: @accentFont;
-			padding-right: 10px;
-			padding-left: 10px;
-			color: @navColor;
-			margin-top: 25px;
+.imgGallery {
+	ul {
+		padding: 0 0 0 0;
+		margin: 0 0 0 0;
+	ul li {
+			list-style: none;
+			margin-bottom: 25px;
+		}
+	}
+}
 
-			&:hover {
-				color: @navColorHover;
-				text-decoration: none;
-			}
+.footer {
+	padding-top: 25px;
+	a {
+		font-family: @accentFont;
+		padding-right: 10px;
+		padding-left: 10px;
+		color: @navColor;
+		margin-top: 25px;
+		&:hover {
+			color: @navColorHover;
+			text-decoration: none;
 		}
 	}
 }
 #footer{
 	font-family: @mainFont;
 	padding-top: 15px;
-	// padding-left: 5px;
+	padding-left: 10px;
 	font-size: 10px;
 	color: @navColor;
 
 }
-
-.btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger {
-    -webkit-box-shadow: 2px 5px 0px rgba(4, 4, 4, 0.3);
-    -moz-box-shadow:    2px 5px 0px rgba(4, 4, 4, 0.3);
-    box-shadow:         2px 5px 0px rgba(4, 4, 4, 0.3);
-}
-.btn-default:active,.btn-primary:active,.btn-success:active,.btn-info:active,.btn-warning:active,.btn-danger:active {
-    margin: 3px;
-}
-
 .btn {
+
 	font-family: @mainFont;
 	opacity: 0.85;  /* Opacity for Modern Browsers */
     filter: alpha(opacity=85);  /* Opacity for IE8 and lower */
     zoom: 1;  /* Fix for IE7 */
 	margin-bottom: 5px;
+
 	border-color: @navColor !important;
 	border-left-width: 2px !important;
 	border-top-width: 2px !important;
-}
-.btn:hover {
 
-	color: #fff !important;
-	background-color: @navColor !important;
-	border-color: @navColorHover !important;
-	opacity: 0.85;  /* Opacity for Modern Browsers */
+	-webkit-box-shadow: 2px 5px 0px rgba(4, 4, 4, 0.3);
+    -moz-box-shadow:    2px 5px 0px rgba(4, 4, 4, 0.3);
+    box-shadow:         2px 5px 0px rgba(4, 4, 4, 0.3);
 
-    filter: alpha(opacity=85);  /* Opacity for IE8 and lower */
-    zoom: 1;  /* Fix for IE7 */
-	transform: scale(1.040);
-	transition: all .5s ease-in-out;
+	&:active {
+		margin: 3px;
+	}
+	&:hover {
+		color: #fff !important;
+		background-color: @navColor !important;
+		border-color: @navColorHover !important;
 
-	box-shadow: shake !important;
-	-moz-box-shadow: shake !important;
-	-webkit-box-shadow: shake !important;
-	animation-name: shake !important;
-	animation-duration: .5s !important;
-	-moz-animation-duration: .5s !important;
-	-webkit-animation-duration: .5s !important;
+		opacity: 0.85;  /* Opacity for Modern Browsers */
+		filter: alpha(opacity=85);  /* Opacity for IE8 and lower */
+		zoom: 1;  /* Fix for IE7 */
+
+		transform: scale(1.040);
+		transition: all .5s ease-in-out;
+
+		animation-duration: .5s !important;
+		-moz-animation-duration: .5s !important;
+		-webkit-animation-duration: .5s !important;
+
+
+		box-shadow: shake !important;
+		-moz-box-shadow: shake !important;
+		-webkit-box-shadow: shake !important;
+
+		animation-name: shake !important;
+	}
 }
 
 @keyframes shake {
@@ -280,7 +275,8 @@ ul.nav li a {
     0%, 100% {-moz-transform: translateX(0);}
     10%, 30%, 50%, 70%, 90% {-moz-transform: translateX(-1px);}
     20%, 40%, 60%, 80% {-moz-transform: translateX(1px);}
-}@-webkit-keyframes shake {
+}
+@-webkit-keyframes shake {
     0%, 100% {-webkit-transform: translateX(0);}
     10%, 30%, 50%, 70%, 90% {-webkit-transform: translateX(-1px);}
     20%, 40%, 60%, 80% {-webkit-transform: translateX(1px);}

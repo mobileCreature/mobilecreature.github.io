@@ -70,8 +70,7 @@ h3 {
     font-size: 26px;
   }
 }
-p,
-.lightBackground {
+p {
   font-family: 'Open Sans', sans-serif;;
   font-weight: 600;
   font-size: 20px;
@@ -85,16 +84,13 @@ p,
   margin-top: 10px;
   box-shadow: 2px 5px 0px rgba(4, 4, 4, 0.5);
 }
+.site-text a:hover {
+  text-decoration: none;
+}
 .images:hover {
   content: url("http://i.imgur.com/E1LjfbD.jpg");
-}
-.shadowLight {
-  text-shadow: 2px 1px 2px darkgrey;
-  color: rgba(255, 255, 255, 0.7);
-}
-.shadowDark {
-  text-shadow: 2px 1px 2px darkred;
-  color: rgba(0, 0, 0, 0.7);
+  -webkit-transition: all 3s ease-in-out;
+          transition: all 3s ease-in-out;
 }
 #navbar {
   background-color: #e7e7e7;
@@ -123,41 +119,34 @@ ul.nav li a:hover {
   color: darkred !important;
   background-color: lightgrey !important;
 }
+.imgGallery ul {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+.imgGallery ul ul li {
+  list-style: none;
+  margin-bottom: 25px;
+}
 .footer {
   padding-top: 25px;
 }
-.footer .container a {
+.footer a {
   font-family: 'Montez', cursive;;
   padding-right: 10px;
   padding-left: 10px;
   color: #266b8e;
   margin-top: 25px;
 }
-.footer .container a:hover {
+.footer a:hover {
   color: darkred;
   text-decoration: none;
 }
 #footer {
   font-family: 'Expletus Sans', cursive;;
   padding-top: 15px;
+  padding-left: 10px;
   font-size: 10px;
   color: #266b8e;
-}
-.btn-default,
-.btn-primary,
-.btn-success,
-.btn-info,
-.btn-warning,
-.btn-danger {
-  box-shadow: 2px 5px 0px rgba(4, 4, 4, 0.3);
-}
-.btn-default:active,
-.btn-primary:active,
-.btn-success:active,
-.btn-info:active,
-.btn-warning:active,
-.btn-danger:active {
-  margin: 3px;
 }
 .btn {
   font-family: 'Expletus Sans', cursive;;
@@ -171,6 +160,10 @@ ul.nav li a:hover {
   border-color: #266b8e !important;
   border-left-width: 2px !important;
   border-top-width: 2px !important;
+  box-shadow: 2px 5px 0px rgba(4, 4, 4, 0.3);
+}
+.btn:active {
+  margin: 3px;
 }
 .btn:hover {
   color: #fff !important;
@@ -186,14 +179,14 @@ ul.nav li a:hover {
           transform: scale(1.04);
   -webkit-transition: all 0.5s ease-in-out;
           transition: all 0.5s ease-in-out;
+  animation-duration: .5s !important;
+  -moz-animation-duration: .5s !important;
+  -webkit-animation-duration: .5s !important;
   box-shadow: shake !important;
   -moz-box-shadow: shake !important;
   -webkit-box-shadow: shake !important;
   -webkit-animation-name: shake !important;
           animation-name: shake !important;
-  animation-duration: .5s !important;
-  -moz-animation-duration: .5s !important;
-  -webkit-animation-duration: .5s !important;
 }
 @keyframes shake {
   0%,
