@@ -41,6 +41,7 @@ $(document).ready(function () {
             $('#image-gallery-caption').text($sel.data('caption'));
             $('#image-gallery-title').text($sel.data('title'));
             $('#image-gallery-image').attr('src', $sel.data('image'));
+            $('#image-gallery-url').attr('href', $sel.data('url'));
             disableButtons(counter, $sel.data('image-id'));
         }
 
