@@ -3,11 +3,9 @@ $(document).ready(function () {
 
     loadGallery(true, 'a.thumbnail');
 
-    /**
-    *
-    * @param setIDs        Sets IDs when DOM is loaded. If using a PHP counter, set to false.
-    * @param setClickAttr  Sets the attribute for the click handler.
-    */
+    $('.navbar-nav li a').click(function (event) {
+        $('.navbar-collapse').collapse('hide');
+    });
 
     function loadGallery(setIDs, setClickAttr) {
         var currentImage,
