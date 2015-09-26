@@ -229,6 +229,14 @@ ul.nav li a:hover {
     -webkit-transform: translateX(1px);
   }
 }
+.modal-header a {
+  text-decoration: none;
+}
+.modal-footer #image-gallery-caption {
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;;
+  color: darkred;
+}
 hr {
   width: 90%;
   height: 5px;
