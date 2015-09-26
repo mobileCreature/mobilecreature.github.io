@@ -175,8 +175,8 @@ ul.nav li a:hover {
   /* Opacity for IE8 and lower */
   zoom: 1;
   /* Fix for IE7 */
-  -webkit-transform: scale(1.04);
-          transform: scale(1.04);
+  -webkit-transform: scale(1);
+          transform: scale(1);
   -webkit-transition: all 0.5s ease-in-out;
           transition: all 0.5s ease-in-out;
   animation-duration: .5s !important;
@@ -236,6 +236,32 @@ ul.nav li a:hover {
   font-weight: bold;
   font-family: 'Open Sans', sans-serif;;
   color: darkred;
+}
+.fa-thumb-box {
+  display: inline-block !important;
+  position: relative !important;
+  overflow: hidden;
+}
+.fa-thumb-box-overlay {
+  display: none;
+}
+.fa-thumb-box a:hover .fa-thumb-box-overlay {
+  display: inline;
+  text-align: center;
+  position: absolute;
+  -webkit-transition: background 0.2s ease, padding 0.8s linear;
+          transition: background 0.2s ease, padding 0.8s linear;
+  background-color: rgba(38, 107, 142, 0.58);
+  color: #fff;
+  width: 86%;
+  height: 81%;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+.fa-thumb-box-overlay span {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 hr {
   width: 90%;

@@ -149,13 +149,6 @@ p {
 	text-decoration: none;
 	}
 }
-img {
-	// padding: 25px;
-	// border-radius: 20px;
-	// &:hover {
-	// 	content: url("http://i.imgur.com/X0ubtV9.jpg");
-	// }
-}
 .images {
 	&:hover {
 		content: url("http://i.imgur.com/E1LjfbD.jpg");
@@ -250,7 +243,7 @@ ul.nav li a {
 		filter: alpha(opacity=85);  /* Opacity for IE8 and lower */
 		zoom: 1;  /* Fix for IE7 */
 
-		transform: scale(1.040);
+		transform: scale(1.0);
 		transition: all .5s ease-in-out;
 
 		animation-duration: .5s !important;
@@ -292,6 +285,32 @@ ul.nav li a {
 		font-family: @textFont;
 		color: @h1Color;
 	}
+}
+.fa-thumb-box {
+  display: inline-block !important;
+  position: relative !important;
+  overflow: hidden;
+}
+.fa-thumb-box-overlay {
+  display: none;
+}
+.fa-thumb-box a:hover .fa-thumb-box-overlay {
+  display: inline;
+  text-align: center;
+  position: absolute;
+  transition: background 0.2s ease, padding 0.8s linear;
+  background-color: rgba(38, 107, 142, 0.58);
+  color: #fff;
+  width: 86%;
+  height: 81%;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+}
+.fa-thumb-box-overlay span {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 hr {
 	width:90%;
