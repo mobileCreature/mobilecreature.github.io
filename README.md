@@ -1,4 +1,4 @@
-# mobileCreature.github.io
+# mobileCreature
 
 ## [Visit Site](http://mobileCreature.github.io/)
 [mobileCreature Web Design Studio](http://mobileCreature.github.io/)
