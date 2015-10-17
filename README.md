@@ -1,5 +1,5 @@
-# GJSmith3rd/gjsmith3rd.github.io
-[mobileCreature Web Design Studio](http://gjsmith3rd.github.io/) 
+# mobileCreature/mobileCreature.github.io
+[mobileCreature Web Design Studio](http://mobileCreature.github.io/) 
 --------------------------------
 Hosted on GitHub.io and CodePen.
 
