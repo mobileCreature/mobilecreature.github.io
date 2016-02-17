@@ -1,23 +1,5 @@
 /* global $ */
 
-var developmentMode = false;
-
-if (developmentMode && location.host === '10.0.0.57:3099') {
-
-    // Enable Live.js Auto Refresh Webpage on CSS, HTML and JS Changes
-    // $.getScript('public/js/live.js');
-
-    // Remove Adsense from DOM
-    $(document).ready(function () {
-        $('.adsense').remove();
-    });
-
-} else {
-
-    // Load Adsense JavaScript
-    $.getScript('//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js');
-}
-
 $(document).ready(function () {
 
     loadGallery(true, 'a.thumbnail');
