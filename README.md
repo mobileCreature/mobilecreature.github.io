@@ -1,10 +1,11 @@
-# mobileCreature
-
-## [Visit Site](http://mobileCreature.github.io/)
-[mobileCreature Web Design Studio](http://mobileCreature.github.io/)
+# [mobileCreature](http://codepen.io/GJSmith3rd/full/epOZZM)
 --------------------------------
-Hosted on GitHub.io and CodePen.
+#### A FreeCodeCamp Project.
 
-A [CodePen - mobileCreature Web Design Studio](http://codepen.io/GJSmith3rd/full/epOZZM) and [FreeCodeCamp - GJSmith3rd](http://freecodecamp.com/gjsmith3rd), Zipline Project 1 - Personal Portfolio Webpage, by [CodePen - Gilbert Smith](http://codepen.io/GJSmith3rd) on [CodePen](http://codepen.io/).
+[mobileCreature Web Design Studio](http://mobilecreature.github.io/)
+--------------------------------
+A mobileCreature and Gilbert Smith project.
 
-[FreeCodeCamp](http://freecodecamp.com/gjsmith3rd).
+Hosted on [CodePen - Pomodoro Timer](http://codepen.io/GJSmith3rd/full/epOZZM) and developed by [FreeCodeCamp - GJSmith3rd](http://freecodecamp.com/gjsmith3rd)
+
+
