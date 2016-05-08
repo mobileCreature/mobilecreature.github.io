@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
 
-    var stopGoogleAds = false;
+    var stopGoogleAds = true;
 
     //Test for local dev network
     if (/^10.0.0/.test(location.hostname) && stopGoogleAds) {
