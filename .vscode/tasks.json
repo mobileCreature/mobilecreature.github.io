@@ -20,16 +20,18 @@
 			"showOutput": "always",
 			"echoCommand": true,
 			"args": [
-				"serve-dev"
+				"serve-build"
 			]
 		},
 		{
-			"taskName": "serve-dev",
+			"taskName": "--verbose",
 			"isBuildCommand": false,
 			"isTestCommand": true,
 			"showOutput": "always",
 			"echoCommand": true,
-			"args": []
+			"args": [
+				"serve-dev"
+			]
 		}
 	]
 }

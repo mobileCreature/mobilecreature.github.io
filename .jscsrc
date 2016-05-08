@@ -39,8 +39,7 @@
     ],
     "requireSpaceBeforeBinaryOperators": [
         "=", "+=", "-=", "*=", "/=", "%=", "<<=", ">>=", ">>>=",
-        "&=", "|=", "^=", "+=",
-
+        "&=", "|=", "^=",
         "+", "-", "*", "/", "%", "<<", ">>", ">>>", "&",
         "|", "^", "&&", "||", "===", "==", ">=",
         "<=", "<", ">", "!=", "!=="
@@ -55,15 +54,13 @@
 
     // "validateJSDoc": {
     //     "checkParamNames": false,
-    //     "requireParamTypes": false        
+    //     "requireParamTypes": false
     // },
 
     "disallowMultipleLineBreaks": true,
-
     "disallowCommaBeforeLineBreak": null,
     "disallowDanglingUnderscores": null,
     "disallowEmptyBlocks": null,
-    "disallowMultipleLineStrings": null,
     "disallowTrailingComma": null,
     "requireCommaBeforeLineBreak": null,
     "requireDotNotation": null,

@@ -1,6 +1,7 @@
 # Ignore VSCode Configuration #
 ###################
 /.settings
+/.vscode
 
 # Ignore Visual Studio Project #
 ###################
