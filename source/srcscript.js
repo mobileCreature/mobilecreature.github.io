@@ -2,6 +2,19 @@
 
 $(document).ready(function () {
 
+    var developmentMode = false;
+
+    if (developmentMode && location.host === '10.0.0.57:3099') {
+
+        // Remove Adsense from DOM
+            $('.adsense').remove();
+
+    } else {
+
+        // Load Adsense JavaScript
+        $.getScript('//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js');
+    }
+
     loadGallery(true, 'a.thumbnail');
 
     $('.navbar-nav li a').click(function (event) {
