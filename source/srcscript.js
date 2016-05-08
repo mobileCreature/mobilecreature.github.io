@@ -2,12 +2,13 @@
 
 $(document).ready(function () {
 
-    var developmentMode = false;
+    var stopGoogleAds = false;
 
-    if (developmentMode && location.host === '10.0.0.57:3099') {
+    //Test for local dev network
+    if (/^10.0.0/.test(location.hostname) && stopGoogleAds) {
 
         // Remove Adsense from DOM
-            $('.adsense').remove();
+        $('.adsense').remove();
 
     } else {
 
