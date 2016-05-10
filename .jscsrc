@@ -11,9 +11,9 @@
         "catch"
     ],
     "requireOperatorBeforeLineBreak": true,
-    "requireCamelCaseOrUpperCaseIdentifiers": true,
+    "requireCamelCaseOrUpperCaseIdentifiers": false,
     "maximumLineLength": {
-      "value": 100,
+      "value": 250,
       "allowComments": true,
       "allowRegex": true
     },
