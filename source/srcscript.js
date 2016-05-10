@@ -2,8 +2,6 @@
 
 $(document).ready(function () {
 
-    var $this = $(this);
-
     var stopGoogleAds = true;
 
     //Test for local dev network
@@ -33,8 +31,8 @@ $(document).ready(function () {
             responsive_use_stoppoints: true
         });
 
-        $('.cld-responsive').load(function () {
-            $(this).parent().css('backgroundImage', 'url(' + $(this).attr('src') + ')');
+        $('#home-bg-image').load(function () {
+            $('#home').css('backgroundImage', 'url(' + $('#home-bg-image').attr('src') + ')');
         });
 
     })();
