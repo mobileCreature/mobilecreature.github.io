@@ -2,7 +2,9 @@
 
 $(document).ready(function () {
 
-    var stopGoogleAds = false;
+    var $this = $(this);
+
+    var stopGoogleAds = true;
 
     //Test for local dev network
     if (/^10.0.0/.test(location.hostname) && stopGoogleAds) {
@@ -16,28 +18,30 @@ $(document).ready(function () {
         $.getScript('//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js');
     }
 
-  /*
-  * Cloudinary jQuery/JS Dynamic Images
-  */
+    /*
+    * Cloudinary jQuery/JS Dynamic Images
+    */
 
-  (function () {
+    (function () {
 
-    $.cloudinary.config(
-      {
+        $.cloudinary.config(
+            {}
+        );
 
-      }
-    );
+        $.cloudinary.responsive({
+            type: 'fetch',
+            responsive_use_stoppoints: true
+        });
 
-    $.cloudinary.responsive({
-      type: 'fetch',
-      responsive_use_stoppoints: true
-    });
+        $('.cld-responsive').load(function () {
+            $(this).parent().css('backgroundImage', 'url(' + $(this).attr('src') + ')');
+        });
 
-    $('#cld-img-id').load(function () {
-      $('#cld-parent-id').css('backgroundImage', 'url(' + $('#cld-img-id').attr('src') + ')');
-    });
+    })();
 
-  })();
+    /*
+    * Gallery
+    */
 
     loadGallery(true, 'a.thumbnail');
 
