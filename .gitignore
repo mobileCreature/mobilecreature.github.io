@@ -3,11 +3,6 @@
 /.settings
 /.vscode
 
-# Ignore Processed and Derived files
-/index.html
-/script.js
-/styles.css
-
 # Ignore Visual Studio Project #
 ###################
 *.user
