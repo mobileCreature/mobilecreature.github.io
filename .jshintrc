@@ -1,6 +1,6 @@
 {
     "bitwise": true,
-    "camelcase": false,
+    "camelcase": true,
     "curly": true,
     "eqeqeq": true,
     "es3": false,
@@ -23,7 +23,7 @@
     "maxdepth": 5,
     "maxstatements": 40,
     "maxcomplexity": 8,
-    "maxlen": 250,
+    "maxlen": 120,
 
     "asi": false,
     "boss": false,

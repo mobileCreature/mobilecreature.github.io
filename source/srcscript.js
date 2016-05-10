@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
 
-    var stopGoogleAds = true;
+    var stopGoogleAds = false;
 
     //Test for local dev network
     if (/^10.0.0/.test(location.hostname) && stopGoogleAds) {
@@ -15,31 +15,6 @@ $(document).ready(function () {
         // Load Adsense JavaScript
         $.getScript('//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js');
     }
-
-    /*
-    * Cloudinary jQuery/JS Dynamic Images
-    */
-
-    (function () {
-
-        $.cloudinary.config(
-            {}
-        );
-
-        $.cloudinary.responsive({
-            type: 'fetch',
-            responsive_use_stoppoints: true
-        });
-
-        $('#home-bg-image').load(function () {
-            $('#home').css('backgroundImage', 'url(' + $('#home-bg-image').attr('src') + ')');
-        });
-
-    })();
-
-    /*
-    * Gallery
-    */
 
     loadGallery(true, 'a.thumbnail');
 
