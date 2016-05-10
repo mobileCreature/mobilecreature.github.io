@@ -16,6 +16,29 @@ $(document).ready(function () {
         $.getScript('//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js');
     }
 
+  /*
+  * Cloudinary jQuery/JS Dynamic Images
+  */
+
+  (function () {
+
+    $.cloudinary.config(
+      {
+
+      }
+    );
+
+    $.cloudinary.responsive({
+      type: 'fetch',
+      responsive_use_stoppoints: true
+    });
+
+    $('#cld-img-id').load(function () {
+      $('#cld-parent-id').css('backgroundImage', 'url(' + $('#cld-img-id').attr('src') + ')');
+    });
+
+  })();
+
     loadGallery(true, 'a.thumbnail');
 
     $('.navbar-nav li a').click(function (event) {
