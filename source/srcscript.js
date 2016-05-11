@@ -4,6 +4,8 @@ $(document).ready(function () {
 
     var stopGoogleAds = true;
 
+    $('.test').text(location.hostname);
+
     switch (true) {
         //Remove Google Analytics Codepen - Run Google Ads
         case (/codepen/.test(location.hostname)):
@@ -20,7 +22,7 @@ $(document).ready(function () {
             $.getScript('//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js');
             break;
         default:
-        //Remove Google Adsense and Google Github + Codepen Anaytics
+            //Remove Google Adsense and Google Github + Codepen Anaytics
             $('.codepen').remove();
             $('.github').remove();
             //Test for local dev network
