@@ -8,12 +8,14 @@ $(document).ready(function () {
         //Remove Google Analytics Codepen - Run Google Ads
         case (/codepen/.test(location.hostname)):
             $('.github').remove();
+            $('.adsesnse-github').remove();
             $('.local').remove();
             $.getScript('//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js');
             break;
         //Remove Google Analytics Github - Run Google Ads
         case (/github/.test(location.hostname)):
             $('.codepen').remove();
+            $('.adsesnse-codepen').remove();
             $('.local').remove();
             $.getScript('//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js');
             break;
