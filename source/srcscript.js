@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
 
-    var stopGoogleAds = true;
+    var stopGoogleAds = false;
 
     switch (true) {
         //Remove Google Analytics Codepen - Run Google Ads
