@@ -4,8 +4,6 @@ $(document).ready(function () {
 
     var stopGoogleAds = true;
 
-    $('.test').text(location.hostname);
-
     switch (true) {
         //Remove Google Analytics Codepen - Run Google Ads
         case (/codepen/.test(location.hostname)):
@@ -16,6 +14,7 @@ $(document).ready(function () {
             break;
         //Remove Google Analytics Github - Run Google Ads
         case (/github/.test(location.hostname)):
+            $('.test').text(location.hostname);
             $('.codepen').remove();
             $('.adsense-codepen').remove();
             $('.local').remove();
