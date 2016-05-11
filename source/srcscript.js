@@ -14,7 +14,6 @@ $(document).ready(function () {
             break;
         //Remove Google Analytics Github - Run Google Ads
         case (/github/.test(location.hostname)):
-            $('.test').text(location.hostname);
             $('.codepen').remove();
             $('.adsense-codepen').remove();
             $('.local').remove();
