@@ -2,18 +2,32 @@
 
 $(document).ready(function () {
 
-    var stopGoogleAds = false;
+    var stopGoogleAds = true;
 
-    //Test for local dev network
-    if (/^10.0.0/.test(location.hostname) && stopGoogleAds) {
-
-        // Remove Adsense from DOM
-        $('.adsense').remove();
-
-    } else {
-
-        // Load Adsense JavaScript
-        $.getScript('//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js');
+    switch (true) {
+        //Remove Google Analytics Codepen - Run Google Ads
+        case (/codepen/.test(location.hostname)):
+            $('.github').remove();
+            $('.local').remove();
+            $.getScript('//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js');
+            break;
+        //Remove Google Analytics Github - Run Google Ads
+        case (/github/.test(location.hostname)):
+            $('.codepen').remove();
+            $('.local').remove();
+            $.getScript('//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js');
+            break;
+        default:
+        //Remove Google Adsense and Google Github + Codepen Anaytics
+            $('.codepen').remove();
+            $('.github').remove();
+            //Test for local dev network
+            if (stopGoogleAds) {
+                // Remove Adsense from DOM
+                $('.adsense').remove();
+            } else {
+                $.getScript('//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js');
+            }
     }
 
     loadGallery(true, 'a.thumbnail');
